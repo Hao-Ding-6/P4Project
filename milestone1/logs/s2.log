@@ -1,0 +1,1586 @@
+Calling target program-options parser
+Adding interface s2-eth1 as port 1
+[20:36:34.816] [bmv2] [D] [thread 22158] Adding interface s2-eth1 as port 1
+Adding interface s2-eth2 as port 2
+[20:36:34.844] [bmv2] [D] [thread 22158] Adding interface s2-eth2 as port 2
+I1009 20:36:34.868501403   22158 server_builder.cc:247]      Synchronous server. Num CQs: 1, Min pollers: 1, Max Pollers: 2147483647, CQ timeout (msec): 1000
+Server listening on 0.0.0.0:50052
+[20:36:34.870] [bmv2] [I] [thread 22158] Starting Thrift server on port 9091
+[20:36:34.871] [bmv2] [I] [thread 22158] Thrift server was started
+New connection
+P4Runtime SetForwardingPipelineConfig
+[20:36:37.491] [bmv2] [W] [thread 22214] [P4Runtime] p4::tmp::P4DeviceConfig is deprecated
+[20:36:37.492] [bmv2] [D] [thread 22214] Set default default entry for table 'myIngress.ecmp_group': NoAction - 
+[20:36:37.492] [bmv2] [D] [thread 22214] Set default default entry for table 'myIngress.ecmp_nhop': NoAction - 
+[20:36:37.492] [bmv2] [D] [thread 22214] Set default default entry for table 'myIngress.ipv4_lpm': myIngress.drop - 
+[20:36:37.492] [bmv2] [D] [thread 22214] Set default default entry for table 'myEgress.send_frame': NoAction - 
+[20:36:37.494] [bmv2] [D] [thread 22221] [0.0] [cxt 0] Processing packet received on port 1
+[20:36:37.494] [bmv2] [D] [thread 22221] [0.0] [cxt 0] Parser 'parser': start
+[20:36:37.494] [bmv2] [D] [thread 22221] [0.0] [cxt 0] Parser 'parser' entering state 'start'
+[20:36:37.494] [bmv2] [D] [thread 22221] [0.0] [cxt 0] Extracting header 'ethernet'
+[20:36:37.494] [bmv2] [D] [thread 22221] [0.0] [cxt 0] Extracting header 'ecmp'
+[20:36:37.494] [bmv2] [D] [thread 22221] [0.0] [cxt 0] Extracting header 'ipv4'
+[20:36:37.494] [bmv2] [D] [thread 22221] [0.0] [cxt 0] Extracting header 'tcp'
+[20:36:37.494] [bmv2] [D] [thread 22221] [0.0] [cxt 0] Parser state 'start' has no switch, going to default next state
+[20:36:37.494] [bmv2] [T] [thread 22221] [0.0] [cxt 0] Bytes parsed: 58
+[20:36:37.494] [bmv2] [D] [thread 22221] [0.0] [cxt 0] Parser 'parser': end
+[20:36:37.494] [bmv2] [D] [thread 22221] [0.0] [cxt 0] Pipeline 'ingress': start
+[20:36:37.494] [bmv2] [T] [thread 22221] [0.0] [cxt 0] milestone1.p4(178) Condition "hdr.ipv4.isValid() && hdr.ipv4.ttl > 0" (node_2) is false
+[20:36:37.494] [bmv2] [D] [thread 22221] [0.0] [cxt 0] Pipeline 'ingress': end
+[20:36:37.494] [bmv2] [D] [thread 22221] [0.0] [cxt 0] Egress port is 0
+[20:36:37.494] [bmv2] [D] [thread 22221] [1.0] [cxt 0] Processing packet received on port 2
+[20:36:37.494] [bmv2] [D] [thread 22221] [1.0] [cxt 0] Parser 'parser': start
+[20:36:37.494] [bmv2] [D] [thread 22221] [1.0] [cxt 0] Parser 'parser' entering state 'start'
+[20:36:37.494] [bmv2] [D] [thread 22221] [1.0] [cxt 0] Extracting header 'ethernet'
+[20:36:37.494] [bmv2] [D] [thread 22221] [1.0] [cxt 0] Extracting header 'ecmp'
+[20:36:37.494] [bmv2] [D] [thread 22221] [1.0] [cxt 0] Extracting header 'ipv4'
+[20:36:37.494] [bmv2] [D] [thread 22221] [1.0] [cxt 0] Extracting header 'tcp'
+[20:36:37.494] [bmv2] [D] [thread 22221] [1.0] [cxt 0] Parser state 'start' has no switch, going to default next state
+[20:36:37.494] [bmv2] [T] [thread 22221] [1.0] [cxt 0] Bytes parsed: 58
+[20:36:37.494] [bmv2] [D] [thread 22221] [1.0] [cxt 0] Parser 'parser': end
+[20:36:37.494] [bmv2] [D] [thread 22221] [1.0] [cxt 0] Pipeline 'ingress': start
+[20:36:37.494] [bmv2] [T] [thread 22221] [1.0] [cxt 0] milestone1.p4(178) Condition "hdr.ipv4.isValid() && hdr.ipv4.ttl > 0" (node_2) is false
+[20:36:37.494] [bmv2] [D] [thread 22221] [1.0] [cxt 0] Pipeline 'ingress': end
+[20:36:37.494] [bmv2] [D] [thread 22221] [1.0] [cxt 0] Egress port is 0
+[20:36:37.494] [bmv2] [D] [thread 22221] [2.0] [cxt 0] Processing packet received on port 1
+[20:36:37.494] [bmv2] [D] [thread 22221] [2.0] [cxt 0] Parser 'parser': start
+[20:36:37.494] [bmv2] [D] [thread 22221] [2.0] [cxt 0] Parser 'parser' entering state 'start'
+[20:36:37.494] [bmv2] [D] [thread 22221] [2.0] [cxt 0] Extracting header 'ethernet'
+[20:36:37.494] [bmv2] [D] [thread 22221] [2.0] [cxt 0] Extracting header 'ecmp'
+[20:36:37.494] [bmv2] [D] [thread 22221] [2.0] [cxt 0] Extracting header 'ipv4'
+[20:36:37.494] [bmv2] [D] [thread 22221] [2.0] [cxt 0] Extracting header 'tcp'
+[20:36:37.494] [bmv2] [D] [thread 22221] [2.0] [cxt 0] Parser state 'start' has no switch, going to default next state
+[20:36:37.494] [bmv2] [T] [thread 22221] [2.0] [cxt 0] Bytes parsed: 58
+[20:36:37.494] [bmv2] [D] [thread 22221] [2.0] [cxt 0] Parser 'parser': end
+[20:36:37.494] [bmv2] [D] [thread 22221] [2.0] [cxt 0] Pipeline 'ingress': start
+[20:36:37.494] [bmv2] [T] [thread 22221] [2.0] [cxt 0] milestone1.p4(178) Condition "hdr.ipv4.isValid() && hdr.ipv4.ttl > 0" (node_2) is false
+[20:36:37.494] [bmv2] [D] [thread 22221] [2.0] [cxt 0] Pipeline 'ingress': end
+[20:36:37.494] [bmv2] [D] [thread 22221] [2.0] [cxt 0] Egress port is 0
+[20:36:37.494] [bmv2] [D] [thread 22221] [3.0] [cxt 0] Processing packet received on port 2
+[20:36:37.494] [bmv2] [D] [thread 22221] [3.0] [cxt 0] Parser 'parser': start
+[20:36:37.494] [bmv2] [D] [thread 22221] [3.0] [cxt 0] Parser 'parser' entering state 'start'
+[20:36:37.494] [bmv2] [D] [thread 22221] [3.0] [cxt 0] Extracting header 'ethernet'
+[20:36:37.494] [bmv2] [D] [thread 22221] [3.0] [cxt 0] Extracting header 'ecmp'
+[20:36:37.494] [bmv2] [D] [thread 22221] [3.0] [cxt 0] Extracting header 'ipv4'
+[20:36:37.494] [bmv2] [D] [thread 22221] [3.0] [cxt 0] Extracting header 'tcp'
+[20:36:37.494] [bmv2] [D] [thread 22221] [3.0] [cxt 0] Parser state 'start' has no switch, going to default next state
+[20:36:37.494] [bmv2] [T] [thread 22221] [3.0] [cxt 0] Bytes parsed: 58
+[20:36:37.494] [bmv2] [D] [thread 22221] [3.0] [cxt 0] Parser 'parser': end
+[20:36:37.494] [bmv2] [D] [thread 22221] [3.0] [cxt 0] Pipeline 'ingress': start
+[20:36:37.494] [bmv2] [T] [thread 22221] [3.0] [cxt 0] milestone1.p4(178) Condition "hdr.ipv4.isValid() && hdr.ipv4.ttl > 0" (node_2) is false
+[20:36:37.494] [bmv2] [D] [thread 22221] [3.0] [cxt 0] Pipeline 'ingress': end
+[20:36:37.494] [bmv2] [D] [thread 22221] [3.0] [cxt 0] Egress port is 0
+[20:36:37.494] [bmv2] [D] [thread 22221] [4.0] [cxt 0] Processing packet received on port 1
+[20:36:37.494] [bmv2] [D] [thread 22221] [4.0] [cxt 0] Parser 'parser': start
+[20:36:37.494] [bmv2] [D] [thread 22221] [4.0] [cxt 0] Parser 'parser' entering state 'start'
+[20:36:37.494] [bmv2] [D] [thread 22221] [4.0] [cxt 0] Extracting header 'ethernet'
+[20:36:37.494] [bmv2] [D] [thread 22221] [4.0] [cxt 0] Extracting header 'ecmp'
+[20:36:37.494] [bmv2] [D] [thread 22221] [4.0] [cxt 0] Extracting header 'ipv4'
+[20:36:37.494] [bmv2] [D] [thread 22221] [4.0] [cxt 0] Extracting header 'tcp'
+[20:36:37.494] [bmv2] [D] [thread 22221] [4.0] [cxt 0] Parser state 'start' has no switch, going to default next state
+[20:36:37.494] [bmv2] [T] [thread 22221] [4.0] [cxt 0] Bytes parsed: 58
+[20:36:37.494] [bmv2] [D] [thread 22221] [4.0] [cxt 0] Parser 'parser': end
+[20:36:37.494] [bmv2] [D] [thread 22221] [4.0] [cxt 0] Pipeline 'ingress': start
+[20:36:37.495] [bmv2] [T] [thread 22221] [4.0] [cxt 0] milestone1.p4(178) Condition "hdr.ipv4.isValid() && hdr.ipv4.ttl > 0" (node_2) is false
+[20:36:37.495] [bmv2] [D] [thread 22221] [4.0] [cxt 0] Pipeline 'ingress': end
+[20:36:37.495] [bmv2] [D] [thread 22221] [4.0] [cxt 0] Egress port is 0
+[20:36:37.495] [bmv2] [D] [thread 22221] [5.0] [cxt 0] Processing packet received on port 2
+[20:36:37.495] [bmv2] [D] [thread 22221] [5.0] [cxt 0] Parser 'parser': start
+[20:36:37.495] [bmv2] [D] [thread 22221] [5.0] [cxt 0] Parser 'parser' entering state 'start'
+[20:36:37.495] [bmv2] [D] [thread 22221] [5.0] [cxt 0] Extracting header 'ethernet'
+[20:36:37.495] [bmv2] [D] [thread 22221] [5.0] [cxt 0] Extracting header 'ecmp'
+[20:36:37.495] [bmv2] [D] [thread 22221] [5.0] [cxt 0] Extracting header 'ipv4'
+[20:36:37.495] [bmv2] [D] [thread 22221] [5.0] [cxt 0] Extracting header 'tcp'
+[20:36:37.495] [bmv2] [D] [thread 22221] [5.0] [cxt 0] Parser state 'start' has no switch, going to default next state
+[20:36:37.495] [bmv2] [T] [thread 22221] [5.0] [cxt 0] Bytes parsed: 58
+[20:36:37.495] [bmv2] [D] [thread 22221] [5.0] [cxt 0] Parser 'parser': end
+[20:36:37.495] [bmv2] [D] [thread 22221] [5.0] [cxt 0] Pipeline 'ingress': start
+[20:36:37.495] [bmv2] [T] [thread 22221] [5.0] [cxt 0] milestone1.p4(178) Condition "hdr.ipv4.isValid() && hdr.ipv4.ttl > 0" (node_2) is false
+[20:36:37.495] [bmv2] [D] [thread 22221] [5.0] [cxt 0] Pipeline 'ingress': end
+[20:36:37.495] [bmv2] [D] [thread 22221] [5.0] [cxt 0] Egress port is 0
+[20:36:37.495] [bmv2] [D] [thread 22221] [6.0] [cxt 0] Processing packet received on port 1
+[20:36:37.495] [bmv2] [D] [thread 22221] [6.0] [cxt 0] Parser 'parser': start
+[20:36:37.495] [bmv2] [D] [thread 22221] [6.0] [cxt 0] Parser 'parser' entering state 'start'
+[20:36:37.495] [bmv2] [D] [thread 22221] [6.0] [cxt 0] Extracting header 'ethernet'
+[20:36:37.495] [bmv2] [D] [thread 22221] [6.0] [cxt 0] Extracting header 'ecmp'
+[20:36:37.495] [bmv2] [D] [thread 22221] [6.0] [cxt 0] Extracting header 'ipv4'
+[20:36:37.495] [bmv2] [D] [thread 22221] [6.0] [cxt 0] Extracting header 'tcp'
+[20:36:37.495] [bmv2] [D] [thread 22221] [6.0] [cxt 0] Parser state 'start' has no switch, going to default next state
+[20:36:37.495] [bmv2] [T] [thread 22221] [6.0] [cxt 0] Bytes parsed: 58
+[20:36:37.495] [bmv2] [D] [thread 22221] [6.0] [cxt 0] Parser 'parser': end
+[20:36:37.495] [bmv2] [D] [thread 22221] [6.0] [cxt 0] Pipeline 'ingress': start
+[20:36:37.495] [bmv2] [T] [thread 22221] [6.0] [cxt 0] milestone1.p4(178) Condition "hdr.ipv4.isValid() && hdr.ipv4.ttl > 0" (node_2) is false
+[20:36:37.495] [bmv2] [D] [thread 22221] [6.0] [cxt 0] Pipeline 'ingress': end
+[20:36:37.495] [bmv2] [D] [thread 22221] [6.0] [cxt 0] Egress port is 0
+[20:36:37.495] [bmv2] [D] [thread 22221] [7.0] [cxt 0] Processing packet received on port 2
+[20:36:37.495] [bmv2] [D] [thread 22221] [7.0] [cxt 0] Parser 'parser': start
+[20:36:37.495] [bmv2] [D] [thread 22221] [7.0] [cxt 0] Parser 'parser' entering state 'start'
+[20:36:37.495] [bmv2] [D] [thread 22221] [7.0] [cxt 0] Extracting header 'ethernet'
+[20:36:37.495] [bmv2] [D] [thread 22221] [7.0] [cxt 0] Extracting header 'ecmp'
+[20:36:37.495] [bmv2] [D] [thread 22221] [7.0] [cxt 0] Extracting header 'ipv4'
+[20:36:37.495] [bmv2] [D] [thread 22221] [7.0] [cxt 0] Extracting header 'tcp'
+[20:36:37.495] [bmv2] [D] [thread 22221] [7.0] [cxt 0] Parser state 'start' has no switch, going to default next state
+[20:36:37.495] [bmv2] [T] [thread 22221] [7.0] [cxt 0] Bytes parsed: 58
+[20:36:37.495] [bmv2] [D] [thread 22221] [7.0] [cxt 0] Parser 'parser': end
+[20:36:37.495] [bmv2] [D] [thread 22221] [7.0] [cxt 0] Pipeline 'ingress': start
+[20:36:37.495] [bmv2] [T] [thread 22221] [7.0] [cxt 0] milestone1.p4(178) Condition "hdr.ipv4.isValid() && hdr.ipv4.ttl > 0" (node_2) is false
+[20:36:37.495] [bmv2] [D] [thread 22221] [7.0] [cxt 0] Pipeline 'ingress': end
+[20:36:37.495] [bmv2] [D] [thread 22221] [7.0] [cxt 0] Egress port is 0
+[20:36:37.495] [bmv2] [D] [thread 22221] [8.0] [cxt 0] Processing packet received on port 1
+[20:36:37.495] [bmv2] [D] [thread 22221] [8.0] [cxt 0] Parser 'parser': start
+[20:36:37.495] [bmv2] [D] [thread 22221] [8.0] [cxt 0] Parser 'parser' entering state 'start'
+[20:36:37.495] [bmv2] [D] [thread 22221] [8.0] [cxt 0] Extracting header 'ethernet'
+[20:36:37.495] [bmv2] [D] [thread 22221] [8.0] [cxt 0] Extracting header 'ecmp'
+[20:36:37.495] [bmv2] [D] [thread 22221] [8.0] [cxt 0] Extracting header 'ipv4'
+[20:36:37.495] [bmv2] [D] [thread 22221] [8.0] [cxt 0] Extracting header 'tcp'
+[20:36:37.495] [bmv2] [D] [thread 22221] [8.0] [cxt 0] Parser state 'start' has no switch, going to default next state
+[20:36:37.495] [bmv2] [T] [thread 22221] [8.0] [cxt 0] Bytes parsed: 58
+[20:36:37.495] [bmv2] [D] [thread 22221] [8.0] [cxt 0] Parser 'parser': end
+[20:36:37.495] [bmv2] [D] [thread 22221] [8.0] [cxt 0] Pipeline 'ingress': start
+[20:36:37.495] [bmv2] [T] [thread 22221] [8.0] [cxt 0] milestone1.p4(178) Condition "hdr.ipv4.isValid() && hdr.ipv4.ttl > 0" (node_2) is false
+[20:36:37.495] [bmv2] [D] [thread 22221] [8.0] [cxt 0] Pipeline 'ingress': end
+[20:36:37.495] [bmv2] [D] [thread 22221] [8.0] [cxt 0] Egress port is 0
+[20:36:37.495] [bmv2] [D] [thread 22221] [9.0] [cxt 0] Processing packet received on port 2
+[20:36:37.495] [bmv2] [D] [thread 22221] [9.0] [cxt 0] Parser 'parser': start
+[20:36:37.495] [bmv2] [D] [thread 22221] [9.0] [cxt 0] Parser 'parser' entering state 'start'
+[20:36:37.495] [bmv2] [D] [thread 22221] [9.0] [cxt 0] Extracting header 'ethernet'
+[20:36:37.495] [bmv2] [D] [thread 22221] [9.0] [cxt 0] Extracting header 'ecmp'
+[20:36:37.495] [bmv2] [D] [thread 22221] [9.0] [cxt 0] Extracting header 'ipv4'
+[20:36:37.495] [bmv2] [D] [thread 22221] [9.0] [cxt 0] Extracting header 'tcp'
+[20:36:37.495] [bmv2] [D] [thread 22221] [9.0] [cxt 0] Parser state 'start' has no switch, going to default next state
+[20:36:37.495] [bmv2] [T] [thread 22221] [9.0] [cxt 0] Bytes parsed: 58
+[20:36:37.495] [bmv2] [D] [thread 22221] [9.0] [cxt 0] Parser 'parser': end
+[20:36:37.495] [bmv2] [D] [thread 22221] [9.0] [cxt 0] Pipeline 'ingress': start
+[20:36:37.495] [bmv2] [T] [thread 22221] [9.0] [cxt 0] milestone1.p4(178) Condition "hdr.ipv4.isValid() && hdr.ipv4.ttl > 0" (node_2) is false
+[20:36:37.495] [bmv2] [D] [thread 22221] [9.0] [cxt 0] Pipeline 'ingress': end
+[20:36:37.495] [bmv2] [D] [thread 22221] [9.0] [cxt 0] Egress port is 0
+[20:36:37.495] [bmv2] [D] [thread 22221] [10.0] [cxt 0] Processing packet received on port 1
+[20:36:37.495] [bmv2] [D] [thread 22221] [10.0] [cxt 0] Parser 'parser': start
+[20:36:37.495] [bmv2] [D] [thread 22221] [10.0] [cxt 0] Parser 'parser' entering state 'start'
+[20:36:37.495] [bmv2] [D] [thread 22221] [10.0] [cxt 0] Extracting header 'ethernet'
+[20:36:37.495] [bmv2] [D] [thread 22221] [10.0] [cxt 0] Extracting header 'ecmp'
+[20:36:37.495] [bmv2] [D] [thread 22221] [10.0] [cxt 0] Extracting header 'ipv4'
+[20:36:37.495] [bmv2] [D] [thread 22221] [10.0] [cxt 0] Extracting header 'tcp'
+[20:36:37.495] [bmv2] [D] [thread 22221] [10.0] [cxt 0] Parser state 'start' has no switch, going to default next state
+[20:36:37.495] [bmv2] [T] [thread 22221] [10.0] [cxt 0] Bytes parsed: 58
+[20:36:37.495] [bmv2] [D] [thread 22221] [10.0] [cxt 0] Parser 'parser': end
+[20:36:37.495] [bmv2] [D] [thread 22221] [10.0] [cxt 0] Pipeline 'ingress': start
+[20:36:37.495] [bmv2] [T] [thread 22221] [10.0] [cxt 0] milestone1.p4(178) Condition "hdr.ipv4.isValid() && hdr.ipv4.ttl > 0" (node_2) is false
+[20:36:37.495] [bmv2] [D] [thread 22221] [10.0] [cxt 0] Pipeline 'ingress': end
+[20:36:37.495] [bmv2] [D] [thread 22221] [10.0] [cxt 0] Egress port is 0
+[20:36:37.495] [bmv2] [D] [thread 22221] [11.0] [cxt 0] Processing packet received on port 2
+[20:36:37.495] [bmv2] [D] [thread 22221] [11.0] [cxt 0] Parser 'parser': start
+[20:36:37.495] [bmv2] [D] [thread 22221] [11.0] [cxt 0] Parser 'parser' entering state 'start'
+[20:36:37.495] [bmv2] [D] [thread 22221] [11.0] [cxt 0] Extracting header 'ethernet'
+[20:36:37.495] [bmv2] [D] [thread 22221] [11.0] [cxt 0] Extracting header 'ecmp'
+[20:36:37.495] [bmv2] [D] [thread 22221] [11.0] [cxt 0] Extracting header 'ipv4'
+[20:36:37.495] [bmv2] [D] [thread 22221] [11.0] [cxt 0] Extracting header 'tcp'
+[20:36:37.495] [bmv2] [D] [thread 22221] [11.0] [cxt 0] Parser state 'start' has no switch, going to default next state
+[20:36:37.495] [bmv2] [T] [thread 22221] [11.0] [cxt 0] Bytes parsed: 58
+[20:36:37.495] [bmv2] [D] [thread 22221] [11.0] [cxt 0] Parser 'parser': end
+[20:36:37.495] [bmv2] [D] [thread 22221] [11.0] [cxt 0] Pipeline 'ingress': start
+[20:36:37.495] [bmv2] [T] [thread 22221] [11.0] [cxt 0] milestone1.p4(178) Condition "hdr.ipv4.isValid() && hdr.ipv4.ttl > 0" (node_2) is false
+[20:36:37.495] [bmv2] [D] [thread 22221] [11.0] [cxt 0] Pipeline 'ingress': end
+[20:36:37.495] [bmv2] [D] [thread 22221] [11.0] [cxt 0] Egress port is 0
+[20:36:37.495] [bmv2] [D] [thread 22221] [12.0] [cxt 0] Processing packet received on port 1
+[20:36:37.495] [bmv2] [D] [thread 22221] [12.0] [cxt 0] Parser 'parser': start
+[20:36:37.495] [bmv2] [D] [thread 22221] [12.0] [cxt 0] Parser 'parser' entering state 'start'
+[20:36:37.495] [bmv2] [D] [thread 22221] [12.0] [cxt 0] Extracting header 'ethernet'
+[20:36:37.495] [bmv2] [D] [thread 22221] [12.0] [cxt 0] Extracting header 'ecmp'
+[20:36:37.495] [bmv2] [D] [thread 22221] [12.0] [cxt 0] Extracting header 'ipv4'
+[20:36:37.495] [bmv2] [D] [thread 22221] [12.0] [cxt 0] Extracting header 'tcp'
+[20:36:37.495] [bmv2] [D] [thread 22221] [12.0] [cxt 0] Parser state 'start' has no switch, going to default next state
+[20:36:37.495] [bmv2] [T] [thread 22221] [12.0] [cxt 0] Bytes parsed: 58
+[20:36:37.495] [bmv2] [D] [thread 22221] [12.0] [cxt 0] Parser 'parser': end
+[20:36:37.495] [bmv2] [D] [thread 22221] [12.0] [cxt 0] Pipeline 'ingress': start
+[20:36:37.495] [bmv2] [T] [thread 22221] [12.0] [cxt 0] milestone1.p4(178) Condition "hdr.ipv4.isValid() && hdr.ipv4.ttl > 0" (node_2) is false
+[20:36:37.495] [bmv2] [D] [thread 22221] [12.0] [cxt 0] Pipeline 'ingress': end
+[20:36:37.495] [bmv2] [D] [thread 22221] [12.0] [cxt 0] Egress port is 0
+[20:36:37.495] [bmv2] [D] [thread 22221] [13.0] [cxt 0] Processing packet received on port 2
+[20:36:37.495] [bmv2] [D] [thread 22221] [13.0] [cxt 0] Parser 'parser': start
+[20:36:37.495] [bmv2] [D] [thread 22221] [13.0] [cxt 0] Parser 'parser' entering state 'start'
+[20:36:37.495] [bmv2] [D] [thread 22221] [13.0] [cxt 0] Extracting header 'ethernet'
+[20:36:37.495] [bmv2] [D] [thread 22221] [13.0] [cxt 0] Extracting header 'ecmp'
+[20:36:37.495] [bmv2] [D] [thread 22221] [13.0] [cxt 0] Extracting header 'ipv4'
+[20:36:37.495] [bmv2] [D] [thread 22221] [13.0] [cxt 0] Extracting header 'tcp'
+[20:36:37.495] [bmv2] [D] [thread 22221] [13.0] [cxt 0] Parser state 'start' has no switch, going to default next state
+[20:36:37.495] [bmv2] [T] [thread 22221] [13.0] [cxt 0] Bytes parsed: 58
+[20:36:37.495] [bmv2] [D] [thread 22221] [13.0] [cxt 0] Parser 'parser': end
+[20:36:37.495] [bmv2] [D] [thread 22221] [13.0] [cxt 0] Pipeline 'ingress': start
+[20:36:37.495] [bmv2] [T] [thread 22221] [13.0] [cxt 0] milestone1.p4(178) Condition "hdr.ipv4.isValid() && hdr.ipv4.ttl > 0" (node_2) is false
+[20:36:37.495] [bmv2] [D] [thread 22221] [13.0] [cxt 0] Pipeline 'ingress': end
+[20:36:37.495] [bmv2] [D] [thread 22221] [13.0] [cxt 0] Egress port is 0
+[20:36:37.495] [bmv2] [D] [thread 22222] [0.0] [cxt 0] Pipeline 'egress': start
+[20:36:37.495] [bmv2] [T] [thread 22222] [0.0] [cxt 0] milestone1.p4(217) Condition "hdr.ecmp.is_load_balance == 1" (node_9) is false
+[20:36:37.495] [bmv2] [D] [thread 22222] [0.0] [cxt 0] Pipeline 'egress': end
+[20:36:37.495] [bmv2] [D] [thread 22222] [0.0] [cxt 0] Deparser 'deparser': start
+[20:36:37.495] [bmv2] [D] [thread 22222] [0.0] [cxt 0] Updating checksum 'cksum'
+[20:36:37.495] [bmv2] [D] [thread 22222] [0.0] [cxt 0] Deparsing header 'ethernet'
+[20:36:37.495] [bmv2] [D] [thread 22222] [0.0] [cxt 0] Deparsing header 'ecmp'
+[20:36:37.495] [bmv2] [D] [thread 22222] [0.0] [cxt 0] Deparsing header 'ipv4'
+[20:36:37.495] [bmv2] [D] [thread 22222] [0.0] [cxt 0] Deparsing header 'tcp'
+[20:36:37.495] [bmv2] [D] [thread 22222] [0.0] [cxt 0] Deparser 'deparser': end
+[20:36:37.495] [bmv2] [D] [thread 22222] [1.0] [cxt 0] Pipeline 'egress': start
+[20:36:37.495] [bmv2] [T] [thread 22222] [1.0] [cxt 0] milestone1.p4(217) Condition "hdr.ecmp.is_load_balance == 1" (node_9) is false
+[20:36:37.495] [bmv2] [D] [thread 22222] [1.0] [cxt 0] Pipeline 'egress': end
+[20:36:37.495] [bmv2] [D] [thread 22222] [1.0] [cxt 0] Deparser 'deparser': start
+[20:36:37.495] [bmv2] [D] [thread 22222] [1.0] [cxt 0] Updating checksum 'cksum'
+[20:36:37.495] [bmv2] [D] [thread 22222] [1.0] [cxt 0] Deparsing header 'ethernet'
+[20:36:37.495] [bmv2] [D] [thread 22222] [1.0] [cxt 0] Deparsing header 'ecmp'
+[20:36:37.495] [bmv2] [D] [thread 22222] [1.0] [cxt 0] Deparsing header 'ipv4'
+[20:36:37.495] [bmv2] [D] [thread 22222] [1.0] [cxt 0] Deparsing header 'tcp'
+[20:36:37.495] [bmv2] [D] [thread 22222] [1.0] [cxt 0] Deparser 'deparser': end
+[20:36:37.495] [bmv2] [D] [thread 22222] [2.0] [cxt 0] Pipeline 'egress': start
+[20:36:37.495] [bmv2] [T] [thread 22222] [2.0] [cxt 0] milestone1.p4(217) Condition "hdr.ecmp.is_load_balance == 1" (node_9) is false
+[20:36:37.495] [bmv2] [D] [thread 22222] [2.0] [cxt 0] Pipeline 'egress': end
+[20:36:37.495] [bmv2] [D] [thread 22222] [2.0] [cxt 0] Deparser 'deparser': start
+[20:36:37.495] [bmv2] [D] [thread 22222] [2.0] [cxt 0] Updating checksum 'cksum'
+[20:36:37.495] [bmv2] [D] [thread 22222] [2.0] [cxt 0] Deparsing header 'ethernet'
+[20:36:37.495] [bmv2] [D] [thread 22222] [2.0] [cxt 0] Deparsing header 'ecmp'
+[20:36:37.495] [bmv2] [D] [thread 22222] [2.0] [cxt 0] Deparsing header 'ipv4'
+[20:36:37.495] [bmv2] [D] [thread 22222] [2.0] [cxt 0] Deparsing header 'tcp'
+[20:36:37.495] [bmv2] [D] [thread 22222] [2.0] [cxt 0] Deparser 'deparser': end
+[20:36:37.495] [bmv2] [D] [thread 22222] [3.0] [cxt 0] Pipeline 'egress': start
+[20:36:37.495] [bmv2] [T] [thread 22222] [3.0] [cxt 0] milestone1.p4(217) Condition "hdr.ecmp.is_load_balance == 1" (node_9) is false
+[20:36:37.495] [bmv2] [D] [thread 22222] [3.0] [cxt 0] Pipeline 'egress': end
+[20:36:37.495] [bmv2] [D] [thread 22222] [3.0] [cxt 0] Deparser 'deparser': start
+[20:36:37.495] [bmv2] [D] [thread 22222] [3.0] [cxt 0] Updating checksum 'cksum'
+[20:36:37.495] [bmv2] [D] [thread 22222] [3.0] [cxt 0] Deparsing header 'ethernet'
+[20:36:37.495] [bmv2] [D] [thread 22222] [3.0] [cxt 0] Deparsing header 'ecmp'
+[20:36:37.495] [bmv2] [D] [thread 22222] [3.0] [cxt 0] Deparsing header 'ipv4'
+[20:36:37.495] [bmv2] [D] [thread 22222] [3.0] [cxt 0] Deparsing header 'tcp'
+[20:36:37.495] [bmv2] [D] [thread 22222] [3.0] [cxt 0] Deparser 'deparser': end
+[20:36:37.495] [bmv2] [D] [thread 22222] [4.0] [cxt 0] Pipeline 'egress': start
+[20:36:37.495] [bmv2] [T] [thread 22222] [4.0] [cxt 0] milestone1.p4(217) Condition "hdr.ecmp.is_load_balance == 1" (node_9) is false
+[20:36:37.495] [bmv2] [D] [thread 22222] [4.0] [cxt 0] Pipeline 'egress': end
+[20:36:37.495] [bmv2] [D] [thread 22222] [4.0] [cxt 0] Deparser 'deparser': start
+[20:36:37.495] [bmv2] [D] [thread 22222] [4.0] [cxt 0] Updating checksum 'cksum'
+[20:36:37.495] [bmv2] [D] [thread 22222] [4.0] [cxt 0] Deparsing header 'ethernet'
+[20:36:37.495] [bmv2] [D] [thread 22222] [4.0] [cxt 0] Deparsing header 'ecmp'
+[20:36:37.495] [bmv2] [D] [thread 22222] [4.0] [cxt 0] Deparsing header 'ipv4'
+[20:36:37.495] [bmv2] [D] [thread 22222] [4.0] [cxt 0] Deparsing header 'tcp'
+[20:36:37.495] [bmv2] [D] [thread 22222] [4.0] [cxt 0] Deparser 'deparser': end
+[20:36:37.495] [bmv2] [D] [thread 22222] [5.0] [cxt 0] Pipeline 'egress': start
+[20:36:37.495] [bmv2] [T] [thread 22222] [5.0] [cxt 0] milestone1.p4(217) Condition "hdr.ecmp.is_load_balance == 1" (node_9) is false
+[20:36:37.495] [bmv2] [D] [thread 22222] [5.0] [cxt 0] Pipeline 'egress': end
+[20:36:37.495] [bmv2] [D] [thread 22222] [5.0] [cxt 0] Deparser 'deparser': start
+[20:36:37.495] [bmv2] [D] [thread 22222] [5.0] [cxt 0] Updating checksum 'cksum'
+[20:36:37.495] [bmv2] [D] [thread 22222] [5.0] [cxt 0] Deparsing header 'ethernet'
+[20:36:37.495] [bmv2] [D] [thread 22222] [5.0] [cxt 0] Deparsing header 'ecmp'
+[20:36:37.495] [bmv2] [D] [thread 22222] [5.0] [cxt 0] Deparsing header 'ipv4'
+[20:36:37.495] [bmv2] [D] [thread 22222] [5.0] [cxt 0] Deparsing header 'tcp'
+[20:36:37.495] [bmv2] [D] [thread 22222] [5.0] [cxt 0] Deparser 'deparser': end
+[20:36:37.495] [bmv2] [D] [thread 22222] [6.0] [cxt 0] Pipeline 'egress': start
+[20:36:37.495] [bmv2] [T] [thread 22222] [6.0] [cxt 0] milestone1.p4(217) Condition "hdr.ecmp.is_load_balance == 1" (node_9) is false
+[20:36:37.495] [bmv2] [D] [thread 22222] [6.0] [cxt 0] Pipeline 'egress': end
+[20:36:37.495] [bmv2] [D] [thread 22222] [6.0] [cxt 0] Deparser 'deparser': start
+[20:36:37.495] [bmv2] [D] [thread 22222] [6.0] [cxt 0] Updating checksum 'cksum'
+[20:36:37.495] [bmv2] [D] [thread 22222] [6.0] [cxt 0] Deparsing header 'ethernet'
+[20:36:37.495] [bmv2] [D] [thread 22222] [6.0] [cxt 0] Deparsing header 'ecmp'
+[20:36:37.495] [bmv2] [D] [thread 22222] [6.0] [cxt 0] Deparsing header 'ipv4'
+[20:36:37.495] [bmv2] [D] [thread 22222] [6.0] [cxt 0] Deparsing header 'tcp'
+[20:36:37.495] [bmv2] [D] [thread 22222] [6.0] [cxt 0] Deparser 'deparser': end
+[20:36:37.495] [bmv2] [D] [thread 22222] [7.0] [cxt 0] Pipeline 'egress': start
+[20:36:37.495] [bmv2] [T] [thread 22222] [7.0] [cxt 0] milestone1.p4(217) Condition "hdr.ecmp.is_load_balance == 1" (node_9) is false
+[20:36:37.495] [bmv2] [D] [thread 22222] [7.0] [cxt 0] Pipeline 'egress': end
+[20:36:37.495] [bmv2] [D] [thread 22222] [7.0] [cxt 0] Deparser 'deparser': start
+[20:36:37.495] [bmv2] [D] [thread 22222] [7.0] [cxt 0] Updating checksum 'cksum'
+[20:36:37.495] [bmv2] [D] [thread 22222] [7.0] [cxt 0] Deparsing header 'ethernet'
+[20:36:37.495] [bmv2] [D] [thread 22222] [7.0] [cxt 0] Deparsing header 'ecmp'
+[20:36:37.495] [bmv2] [D] [thread 22222] [7.0] [cxt 0] Deparsing header 'ipv4'
+[20:36:37.495] [bmv2] [D] [thread 22222] [7.0] [cxt 0] Deparsing header 'tcp'
+[20:36:37.495] [bmv2] [D] [thread 22222] [7.0] [cxt 0] Deparser 'deparser': end
+[20:36:37.495] [bmv2] [D] [thread 22222] [8.0] [cxt 0] Pipeline 'egress': start
+[20:36:37.495] [bmv2] [T] [thread 22222] [8.0] [cxt 0] milestone1.p4(217) Condition "hdr.ecmp.is_load_balance == 1" (node_9) is false
+[20:36:37.495] [bmv2] [D] [thread 22222] [8.0] [cxt 0] Pipeline 'egress': end
+[20:36:37.495] [bmv2] [D] [thread 22222] [8.0] [cxt 0] Deparser 'deparser': start
+[20:36:37.495] [bmv2] [D] [thread 22222] [8.0] [cxt 0] Updating checksum 'cksum'
+[20:36:37.495] [bmv2] [D] [thread 22222] [8.0] [cxt 0] Deparsing header 'ethernet'
+[20:36:37.495] [bmv2] [D] [thread 22222] [8.0] [cxt 0] Deparsing header 'ecmp'
+[20:36:37.495] [bmv2] [D] [thread 22222] [8.0] [cxt 0] Deparsing header 'ipv4'
+[20:36:37.495] [bmv2] [D] [thread 22222] [8.0] [cxt 0] Deparsing header 'tcp'
+[20:36:37.495] [bmv2] [D] [thread 22222] [8.0] [cxt 0] Deparser 'deparser': end
+[20:36:37.495] [bmv2] [D] [thread 22222] [9.0] [cxt 0] Pipeline 'egress': start
+[20:36:37.495] [bmv2] [T] [thread 22222] [9.0] [cxt 0] milestone1.p4(217) Condition "hdr.ecmp.is_load_balance == 1" (node_9) is false
+[20:36:37.495] [bmv2] [D] [thread 22222] [9.0] [cxt 0] Pipeline 'egress': end
+[20:36:37.495] [bmv2] [D] [thread 22222] [9.0] [cxt 0] Deparser 'deparser': start
+[20:36:37.495] [bmv2] [D] [thread 22222] [9.0] [cxt 0] Updating checksum 'cksum'
+[20:36:37.495] [bmv2] [D] [thread 22222] [9.0] [cxt 0] Deparsing header 'ethernet'
+[20:36:37.495] [bmv2] [D] [thread 22222] [9.0] [cxt 0] Deparsing header 'ecmp'
+[20:36:37.495] [bmv2] [D] [thread 22222] [9.0] [cxt 0] Deparsing header 'ipv4'
+[20:36:37.495] [bmv2] [D] [thread 22222] [9.0] [cxt 0] Deparsing header 'tcp'
+[20:36:37.495] [bmv2] [D] [thread 22222] [9.0] [cxt 0] Deparser 'deparser': end
+[20:36:37.496] [bmv2] [D] [thread 22222] [10.0] [cxt 0] Pipeline 'egress': start
+[20:36:37.496] [bmv2] [T] [thread 22222] [10.0] [cxt 0] milestone1.p4(217) Condition "hdr.ecmp.is_load_balance == 1" (node_9) is false
+[20:36:37.496] [bmv2] [D] [thread 22222] [10.0] [cxt 0] Pipeline 'egress': end
+[20:36:37.496] [bmv2] [D] [thread 22222] [10.0] [cxt 0] Deparser 'deparser': start
+[20:36:37.496] [bmv2] [D] [thread 22222] [10.0] [cxt 0] Updating checksum 'cksum'
+[20:36:37.496] [bmv2] [D] [thread 22222] [10.0] [cxt 0] Deparsing header 'ethernet'
+[20:36:37.496] [bmv2] [D] [thread 22222] [10.0] [cxt 0] Deparsing header 'ecmp'
+[20:36:37.496] [bmv2] [D] [thread 22222] [10.0] [cxt 0] Deparsing header 'ipv4'
+[20:36:37.496] [bmv2] [D] [thread 22222] [10.0] [cxt 0] Deparsing header 'tcp'
+[20:36:37.496] [bmv2] [D] [thread 22222] [10.0] [cxt 0] Deparser 'deparser': end
+[20:36:37.496] [bmv2] [D] [thread 22222] [11.0] [cxt 0] Pipeline 'egress': start
+[20:36:37.496] [bmv2] [T] [thread 22222] [11.0] [cxt 0] milestone1.p4(217) Condition "hdr.ecmp.is_load_balance == 1" (node_9) is false
+[20:36:37.496] [bmv2] [D] [thread 22222] [11.0] [cxt 0] Pipeline 'egress': end
+[20:36:37.496] [bmv2] [D] [thread 22222] [11.0] [cxt 0] Deparser 'deparser': start
+[20:36:37.496] [bmv2] [D] [thread 22222] [11.0] [cxt 0] Updating checksum 'cksum'
+[20:36:37.496] [bmv2] [D] [thread 22222] [11.0] [cxt 0] Deparsing header 'ethernet'
+[20:36:37.496] [bmv2] [D] [thread 22222] [11.0] [cxt 0] Deparsing header 'ecmp'
+[20:36:37.496] [bmv2] [D] [thread 22222] [11.0] [cxt 0] Deparsing header 'ipv4'
+[20:36:37.496] [bmv2] [D] [thread 22222] [11.0] [cxt 0] Deparsing header 'tcp'
+[20:36:37.496] [bmv2] [D] [thread 22222] [11.0] [cxt 0] Deparser 'deparser': end
+[20:36:37.496] [bmv2] [D] [thread 22222] [12.0] [cxt 0] Pipeline 'egress': start
+[20:36:37.496] [bmv2] [T] [thread 22222] [12.0] [cxt 0] milestone1.p4(217) Condition "hdr.ecmp.is_load_balance == 1" (node_9) is false
+[20:36:37.496] [bmv2] [D] [thread 22222] [12.0] [cxt 0] Pipeline 'egress': end
+[20:36:37.496] [bmv2] [D] [thread 22222] [12.0] [cxt 0] Deparser 'deparser': start
+[20:36:37.496] [bmv2] [D] [thread 22222] [12.0] [cxt 0] Updating checksum 'cksum'
+[20:36:37.496] [bmv2] [D] [thread 22222] [12.0] [cxt 0] Deparsing header 'ethernet'
+[20:36:37.496] [bmv2] [D] [thread 22222] [12.0] [cxt 0] Deparsing header 'ecmp'
+[20:36:37.496] [bmv2] [D] [thread 22222] [12.0] [cxt 0] Deparsing header 'ipv4'
+[20:36:37.496] [bmv2] [D] [thread 22222] [12.0] [cxt 0] Deparsing header 'tcp'
+[20:36:37.496] [bmv2] [D] [thread 22222] [12.0] [cxt 0] Deparser 'deparser': end
+[20:36:37.496] [bmv2] [D] [thread 22222] [13.0] [cxt 0] Pipeline 'egress': start
+[20:36:37.496] [bmv2] [T] [thread 22222] [13.0] [cxt 0] milestone1.p4(217) Condition "hdr.ecmp.is_load_balance == 1" (node_9) is false
+[20:36:37.496] [bmv2] [D] [thread 22222] [13.0] [cxt 0] Pipeline 'egress': end
+[20:36:37.496] [bmv2] [D] [thread 22222] [13.0] [cxt 0] Deparser 'deparser': start
+[20:36:37.496] [bmv2] [D] [thread 22222] [13.0] [cxt 0] Updating checksum 'cksum'
+[20:36:37.496] [bmv2] [D] [thread 22222] [13.0] [cxt 0] Deparsing header 'ethernet'
+[20:36:37.496] [bmv2] [D] [thread 22222] [13.0] [cxt 0] Deparsing header 'ecmp'
+[20:36:37.496] [bmv2] [D] [thread 22222] [13.0] [cxt 0] Deparsing header 'ipv4'
+[20:36:37.496] [bmv2] [D] [thread 22222] [13.0] [cxt 0] Deparsing header 'tcp'
+[20:36:37.496] [bmv2] [D] [thread 22222] [13.0] [cxt 0] Deparser 'deparser': end
+[20:36:37.496] [bmv2] [D] [thread 22226] [0.0] [cxt 0] Transmitting packet of size 78 out of port 0
+[20:36:37.496] [bmv2] [D] [thread 22226] [1.0] [cxt 0] Transmitting packet of size 90 out of port 0
+[20:36:37.496] [bmv2] [D] [thread 22226] [2.0] [cxt 0] Transmitting packet of size 90 out of port 0
+[20:36:37.496] [bmv2] [D] [thread 22226] [3.0] [cxt 0] Transmitting packet of size 70 out of port 0
+[20:36:37.496] [bmv2] [D] [thread 22226] [4.0] [cxt 0] Transmitting packet of size 70 out of port 0
+[20:36:37.496] [bmv2] [D] [thread 22226] [5.0] [cxt 0] Transmitting packet of size 90 out of port 0
+[20:36:37.496] [bmv2] [D] [thread 22226] [6.0] [cxt 0] Transmitting packet of size 90 out of port 0
+[20:36:37.496] [bmv2] [D] [thread 22226] [7.0] [cxt 0] Transmitting packet of size 90 out of port 0
+[20:36:37.496] [bmv2] [D] [thread 22226] [8.0] [cxt 0] Transmitting packet of size 110 out of port 0
+[20:36:37.496] [bmv2] [D] [thread 22226] [9.0] [cxt 0] Transmitting packet of size 107 out of port 0
+[20:36:37.496] [bmv2] [D] [thread 22226] [10.0] [cxt 0] Transmitting packet of size 107 out of port 0
+[20:36:37.496] [bmv2] [D] [thread 22226] [11.0] [cxt 0] Transmitting packet of size 90 out of port 0
+[20:36:37.496] [bmv2] [D] [thread 22226] [12.0] [cxt 0] Transmitting packet of size 208 out of port 0
+[20:36:37.496] [bmv2] [D] [thread 22226] [13.0] [cxt 0] Transmitting packet of size 70 out of port 0
+P4Runtime Write
+device_id: 1
+election_id {
+  low: 1
+}
+updates {
+  type: MODIFY
+  entity {
+    table_entry {
+      table_id: 33586905
+      action {
+        action {
+          action_id: 16810275
+        }
+      }
+      is_default_action: true
+    }
+  }
+}
+[20:36:37.499] [bmv2] [D] [thread 22215] Set default entry for table 'myIngress.ipv4_lpm': myIngress.drop - 
+P4Runtime Write
+device_id: 1
+election_id {
+  low: 1
+}
+updates {
+  type: INSERT
+  entity {
+    table_entry {
+      table_id: 33586905
+      match {
+        field_id: 1
+        lpm {
+          value: "\n\000\004\002"
+          prefix_len: 32
+        }
+      }
+      action {
+        action {
+          action_id: 16827038
+          params {
+            param_id: 1
+            value: "\000\000\000\004\002\000"
+          }
+          params {
+            param_id: 2
+            value: "\000\002"
+          }
+        }
+      }
+    }
+  }
+}
+[20:36:37.503] [bmv2] [D] [thread 22215] Entry 0 added to table 'myIngress.ipv4_lpm'
+[20:36:37.503] [bmv2] [D] [thread 22215] Dumping entry 0
+Match key:
+* hdr.ipv4.dstAddr    : LPM       0a000402/32
+Action entry: myIngress.ipv4_forward - 40200,2,
+
+Connection removed
+[20:36:37.561] [bmv2] [D] [thread 22221] [14.0] [cxt 0] Processing packet received on port 2
+[20:36:37.561] [bmv2] [D] [thread 22221] [14.0] [cxt 0] Parser 'parser': start
+[20:36:37.561] [bmv2] [D] [thread 22221] [14.0] [cxt 0] Parser 'parser' entering state 'start'
+[20:36:37.561] [bmv2] [D] [thread 22221] [14.0] [cxt 0] Extracting header 'ethernet'
+[20:36:37.561] [bmv2] [D] [thread 22221] [14.0] [cxt 0] Extracting header 'ecmp'
+[20:36:37.561] [bmv2] [D] [thread 22221] [14.0] [cxt 0] Extracting header 'ipv4'
+[20:36:37.561] [bmv2] [D] [thread 22221] [14.0] [cxt 0] Extracting header 'tcp'
+[20:36:37.561] [bmv2] [D] [thread 22221] [14.0] [cxt 0] Parser state 'start' has no switch, going to default next state
+[20:36:37.561] [bmv2] [T] [thread 22221] [14.0] [cxt 0] Bytes parsed: 58
+[20:36:37.561] [bmv2] [D] [thread 22221] [14.0] [cxt 0] Parser 'parser': end
+[20:36:37.561] [bmv2] [D] [thread 22221] [14.0] [cxt 0] Pipeline 'ingress': start
+[20:36:37.561] [bmv2] [T] [thread 22221] [14.0] [cxt 0] milestone1.p4(178) Condition "hdr.ipv4.isValid() && hdr.ipv4.ttl > 0" (node_2) is false
+[20:36:37.561] [bmv2] [D] [thread 22221] [14.0] [cxt 0] Pipeline 'ingress': end
+[20:36:37.561] [bmv2] [D] [thread 22221] [14.0] [cxt 0] Egress port is 0
+[20:36:37.561] [bmv2] [D] [thread 22222] [14.0] [cxt 0] Pipeline 'egress': start
+[20:36:37.561] [bmv2] [T] [thread 22222] [14.0] [cxt 0] milestone1.p4(217) Condition "hdr.ecmp.is_load_balance == 1" (node_9) is false
+[20:36:37.561] [bmv2] [D] [thread 22222] [14.0] [cxt 0] Pipeline 'egress': end
+[20:36:37.561] [bmv2] [D] [thread 22222] [14.0] [cxt 0] Deparser 'deparser': start
+[20:36:37.561] [bmv2] [D] [thread 22222] [14.0] [cxt 0] Updating checksum 'cksum'
+[20:36:37.561] [bmv2] [D] [thread 22222] [14.0] [cxt 0] Deparsing header 'ethernet'
+[20:36:37.561] [bmv2] [D] [thread 22222] [14.0] [cxt 0] Deparsing header 'ecmp'
+[20:36:37.561] [bmv2] [D] [thread 22222] [14.0] [cxt 0] Deparsing header 'ipv4'
+[20:36:37.561] [bmv2] [D] [thread 22222] [14.0] [cxt 0] Deparsing header 'tcp'
+[20:36:37.561] [bmv2] [D] [thread 22222] [14.0] [cxt 0] Deparser 'deparser': end
+[20:36:37.561] [bmv2] [D] [thread 22226] [14.0] [cxt 0] Transmitting packet of size 196 out of port 0
+[20:36:37.720] [bmv2] [D] [thread 22221] [15.0] [cxt 0] Processing packet received on port 1
+[20:36:37.720] [bmv2] [D] [thread 22221] [15.0] [cxt 0] Parser 'parser': start
+[20:36:37.720] [bmv2] [D] [thread 22221] [15.0] [cxt 0] Parser 'parser' entering state 'start'
+[20:36:37.720] [bmv2] [D] [thread 22221] [15.0] [cxt 0] Extracting header 'ethernet'
+[20:36:37.720] [bmv2] [D] [thread 22221] [15.0] [cxt 0] Extracting header 'ecmp'
+[20:36:37.720] [bmv2] [D] [thread 22221] [15.0] [cxt 0] Extracting header 'ipv4'
+[20:36:37.720] [bmv2] [D] [thread 22221] [15.0] [cxt 0] Extracting header 'tcp'
+[20:36:37.720] [bmv2] [D] [thread 22221] [15.0] [cxt 0] Parser state 'start' has no switch, going to default next state
+[20:36:37.720] [bmv2] [T] [thread 22221] [15.0] [cxt 0] Bytes parsed: 58
+[20:36:37.720] [bmv2] [D] [thread 22221] [15.0] [cxt 0] Parser 'parser': end
+[20:36:37.720] [bmv2] [D] [thread 22221] [15.0] [cxt 0] Pipeline 'ingress': start
+[20:36:37.720] [bmv2] [T] [thread 22221] [15.0] [cxt 0] milestone1.p4(178) Condition "hdr.ipv4.isValid() && hdr.ipv4.ttl > 0" (node_2) is false
+[20:36:37.720] [bmv2] [D] [thread 22221] [15.0] [cxt 0] Pipeline 'ingress': end
+[20:36:37.720] [bmv2] [D] [thread 22221] [15.0] [cxt 0] Egress port is 0
+[20:36:37.720] [bmv2] [D] [thread 22221] [16.0] [cxt 0] Processing packet received on port 2
+[20:36:37.720] [bmv2] [D] [thread 22221] [16.0] [cxt 0] Parser 'parser': start
+[20:36:37.720] [bmv2] [D] [thread 22221] [16.0] [cxt 0] Parser 'parser' entering state 'start'
+[20:36:37.720] [bmv2] [D] [thread 22221] [16.0] [cxt 0] Extracting header 'ethernet'
+[20:36:37.720] [bmv2] [D] [thread 22221] [16.0] [cxt 0] Extracting header 'ecmp'
+[20:36:37.720] [bmv2] [D] [thread 22221] [16.0] [cxt 0] Extracting header 'ipv4'
+[20:36:37.720] [bmv2] [D] [thread 22221] [16.0] [cxt 0] Extracting header 'tcp'
+[20:36:37.720] [bmv2] [D] [thread 22221] [16.0] [cxt 0] Parser state 'start' has no switch, going to default next state
+[20:36:37.720] [bmv2] [T] [thread 22221] [16.0] [cxt 0] Bytes parsed: 58
+[20:36:37.720] [bmv2] [D] [thread 22221] [16.0] [cxt 0] Parser 'parser': end
+[20:36:37.720] [bmv2] [D] [thread 22221] [16.0] [cxt 0] Pipeline 'ingress': start
+[20:36:37.720] [bmv2] [T] [thread 22221] [16.0] [cxt 0] milestone1.p4(178) Condition "hdr.ipv4.isValid() && hdr.ipv4.ttl > 0" (node_2) is false
+[20:36:37.720] [bmv2] [D] [thread 22221] [16.0] [cxt 0] Pipeline 'ingress': end
+[20:36:37.720] [bmv2] [D] [thread 22221] [16.0] [cxt 0] Egress port is 0
+[20:36:37.720] [bmv2] [D] [thread 22222] [15.0] [cxt 0] Pipeline 'egress': start
+[20:36:37.720] [bmv2] [T] [thread 22222] [15.0] [cxt 0] milestone1.p4(217) Condition "hdr.ecmp.is_load_balance == 1" (node_9) is false
+[20:36:37.720] [bmv2] [D] [thread 22222] [15.0] [cxt 0] Pipeline 'egress': end
+[20:36:37.720] [bmv2] [D] [thread 22222] [15.0] [cxt 0] Deparser 'deparser': start
+[20:36:37.720] [bmv2] [D] [thread 22222] [15.0] [cxt 0] Updating checksum 'cksum'
+[20:36:37.720] [bmv2] [D] [thread 22222] [15.0] [cxt 0] Deparsing header 'ethernet'
+[20:36:37.720] [bmv2] [D] [thread 22222] [15.0] [cxt 0] Deparsing header 'ecmp'
+[20:36:37.720] [bmv2] [D] [thread 22222] [15.0] [cxt 0] Deparsing header 'ipv4'
+[20:36:37.720] [bmv2] [D] [thread 22222] [15.0] [cxt 0] Deparsing header 'tcp'
+[20:36:37.720] [bmv2] [D] [thread 22222] [15.0] [cxt 0] Deparser 'deparser': end
+[20:36:37.720] [bmv2] [D] [thread 22222] [16.0] [cxt 0] Pipeline 'egress': start
+[20:36:37.720] [bmv2] [T] [thread 22222] [16.0] [cxt 0] milestone1.p4(217) Condition "hdr.ecmp.is_load_balance == 1" (node_9) is false
+[20:36:37.720] [bmv2] [D] [thread 22222] [16.0] [cxt 0] Pipeline 'egress': end
+[20:36:37.720] [bmv2] [D] [thread 22222] [16.0] [cxt 0] Deparser 'deparser': start
+[20:36:37.720] [bmv2] [D] [thread 22222] [16.0] [cxt 0] Updating checksum 'cksum'
+[20:36:37.720] [bmv2] [D] [thread 22222] [16.0] [cxt 0] Deparsing header 'ethernet'
+[20:36:37.720] [bmv2] [D] [thread 22222] [16.0] [cxt 0] Deparsing header 'ecmp'
+[20:36:37.720] [bmv2] [D] [thread 22222] [16.0] [cxt 0] Deparsing header 'ipv4'
+[20:36:37.720] [bmv2] [D] [thread 22222] [16.0] [cxt 0] Deparsing header 'tcp'
+[20:36:37.720] [bmv2] [D] [thread 22222] [16.0] [cxt 0] Deparser 'deparser': end
+[20:36:37.720] [bmv2] [D] [thread 22226] [15.0] [cxt 0] Transmitting packet of size 196 out of port 0
+[20:36:37.721] [bmv2] [D] [thread 22226] [16.0] [cxt 0] Transmitting packet of size 196 out of port 0
+[20:36:38.205] [bmv2] [D] [thread 22221] [17.0] [cxt 0] Processing packet received on port 1
+[20:36:38.205] [bmv2] [D] [thread 22221] [17.0] [cxt 0] Parser 'parser': start
+[20:36:38.205] [bmv2] [D] [thread 22221] [17.0] [cxt 0] Parser 'parser' entering state 'start'
+[20:36:38.205] [bmv2] [D] [thread 22221] [17.0] [cxt 0] Extracting header 'ethernet'
+[20:36:38.205] [bmv2] [D] [thread 22221] [17.0] [cxt 0] Extracting header 'ecmp'
+[20:36:38.205] [bmv2] [D] [thread 22221] [17.0] [cxt 0] Extracting header 'ipv4'
+[20:36:38.205] [bmv2] [D] [thread 22221] [17.0] [cxt 0] Extracting header 'tcp'
+[20:36:38.205] [bmv2] [D] [thread 22221] [17.0] [cxt 0] Parser state 'start' has no switch, going to default next state
+[20:36:38.205] [bmv2] [T] [thread 22221] [17.0] [cxt 0] Bytes parsed: 58
+[20:36:38.205] [bmv2] [D] [thread 22221] [17.0] [cxt 0] Parser 'parser': end
+[20:36:38.205] [bmv2] [D] [thread 22221] [17.0] [cxt 0] Pipeline 'ingress': start
+[20:36:38.205] [bmv2] [T] [thread 22221] [17.0] [cxt 0] milestone1.p4(178) Condition "hdr.ipv4.isValid() && hdr.ipv4.ttl > 0" (node_2) is false
+[20:36:38.205] [bmv2] [D] [thread 22221] [17.0] [cxt 0] Pipeline 'ingress': end
+[20:36:38.205] [bmv2] [D] [thread 22221] [17.0] [cxt 0] Egress port is 0
+[20:36:38.205] [bmv2] [D] [thread 22222] [17.0] [cxt 0] Pipeline 'egress': start
+[20:36:38.205] [bmv2] [T] [thread 22222] [17.0] [cxt 0] milestone1.p4(217) Condition "hdr.ecmp.is_load_balance == 1" (node_9) is false
+[20:36:38.205] [bmv2] [D] [thread 22222] [17.0] [cxt 0] Pipeline 'egress': end
+[20:36:38.205] [bmv2] [D] [thread 22222] [17.0] [cxt 0] Deparser 'deparser': start
+[20:36:38.205] [bmv2] [D] [thread 22222] [17.0] [cxt 0] Updating checksum 'cksum'
+[20:36:38.205] [bmv2] [D] [thread 22222] [17.0] [cxt 0] Deparsing header 'ethernet'
+[20:36:38.205] [bmv2] [D] [thread 22222] [17.0] [cxt 0] Deparsing header 'ecmp'
+[20:36:38.205] [bmv2] [D] [thread 22222] [17.0] [cxt 0] Deparsing header 'ipv4'
+[20:36:38.205] [bmv2] [D] [thread 22222] [17.0] [cxt 0] Deparsing header 'tcp'
+[20:36:38.205] [bmv2] [D] [thread 22222] [17.0] [cxt 0] Deparser 'deparser': end
+[20:36:38.205] [bmv2] [D] [thread 22226] [17.0] [cxt 0] Transmitting packet of size 196 out of port 0
+[20:36:38.597] [bmv2] [D] [thread 22221] [18.0] [cxt 0] Processing packet received on port 2
+[20:36:38.597] [bmv2] [D] [thread 22221] [18.0] [cxt 0] Parser 'parser': start
+[20:36:38.597] [bmv2] [D] [thread 22221] [18.0] [cxt 0] Parser 'parser' entering state 'start'
+[20:36:38.597] [bmv2] [D] [thread 22221] [18.0] [cxt 0] Extracting header 'ethernet'
+[20:36:38.597] [bmv2] [D] [thread 22221] [18.0] [cxt 0] Extracting header 'ecmp'
+[20:36:38.597] [bmv2] [D] [thread 22221] [18.0] [cxt 0] Extracting header 'ipv4'
+[20:36:38.597] [bmv2] [D] [thread 22221] [18.0] [cxt 0] Extracting header 'tcp'
+[20:36:38.597] [bmv2] [D] [thread 22221] [18.0] [cxt 0] Parser state 'start' has no switch, going to default next state
+[20:36:38.597] [bmv2] [T] [thread 22221] [18.0] [cxt 0] Bytes parsed: 58
+[20:36:38.597] [bmv2] [D] [thread 22221] [18.0] [cxt 0] Parser 'parser': end
+[20:36:38.597] [bmv2] [D] [thread 22221] [18.0] [cxt 0] Pipeline 'ingress': start
+[20:36:38.597] [bmv2] [T] [thread 22221] [18.0] [cxt 0] milestone1.p4(178) Condition "hdr.ipv4.isValid() && hdr.ipv4.ttl > 0" (node_2) is false
+[20:36:38.597] [bmv2] [D] [thread 22221] [18.0] [cxt 0] Pipeline 'ingress': end
+[20:36:38.597] [bmv2] [D] [thread 22221] [18.0] [cxt 0] Egress port is 0
+[20:36:38.597] [bmv2] [D] [thread 22222] [18.0] [cxt 0] Pipeline 'egress': start
+[20:36:38.597] [bmv2] [T] [thread 22222] [18.0] [cxt 0] milestone1.p4(217) Condition "hdr.ecmp.is_load_balance == 1" (node_9) is false
+[20:36:38.597] [bmv2] [D] [thread 22222] [18.0] [cxt 0] Pipeline 'egress': end
+[20:36:38.597] [bmv2] [D] [thread 22222] [18.0] [cxt 0] Deparser 'deparser': start
+[20:36:38.597] [bmv2] [D] [thread 22222] [18.0] [cxt 0] Updating checksum 'cksum'
+[20:36:38.597] [bmv2] [D] [thread 22222] [18.0] [cxt 0] Deparsing header 'ethernet'
+[20:36:38.597] [bmv2] [D] [thread 22222] [18.0] [cxt 0] Deparsing header 'ecmp'
+[20:36:38.597] [bmv2] [D] [thread 22222] [18.0] [cxt 0] Deparsing header 'ipv4'
+[20:36:38.597] [bmv2] [D] [thread 22222] [18.0] [cxt 0] Deparsing header 'tcp'
+[20:36:38.597] [bmv2] [D] [thread 22222] [18.0] [cxt 0] Deparser 'deparser': end
+[20:36:38.597] [bmv2] [D] [thread 22226] [18.0] [cxt 0] Transmitting packet of size 107 out of port 0
+[20:36:38.734] [bmv2] [D] [thread 22221] [19.0] [cxt 0] Processing packet received on port 1
+[20:36:38.734] [bmv2] [D] [thread 22221] [19.0] [cxt 0] Parser 'parser': start
+[20:36:38.734] [bmv2] [D] [thread 22221] [19.0] [cxt 0] Parser 'parser' entering state 'start'
+[20:36:38.734] [bmv2] [D] [thread 22221] [19.0] [cxt 0] Extracting header 'ethernet'
+[20:36:38.734] [bmv2] [D] [thread 22221] [19.0] [cxt 0] Extracting header 'ecmp'
+[20:36:38.734] [bmv2] [D] [thread 22221] [19.0] [cxt 0] Extracting header 'ipv4'
+[20:36:38.734] [bmv2] [D] [thread 22221] [19.0] [cxt 0] Extracting header 'tcp'
+[20:36:38.734] [bmv2] [D] [thread 22221] [19.0] [cxt 0] Parser state 'start' has no switch, going to default next state
+[20:36:38.734] [bmv2] [T] [thread 22221] [19.0] [cxt 0] Bytes parsed: 58
+[20:36:38.734] [bmv2] [D] [thread 22221] [19.0] [cxt 0] Parser 'parser': end
+[20:36:38.734] [bmv2] [D] [thread 22221] [19.0] [cxt 0] Pipeline 'ingress': start
+[20:36:38.734] [bmv2] [T] [thread 22221] [19.0] [cxt 0] milestone1.p4(178) Condition "hdr.ipv4.isValid() && hdr.ipv4.ttl > 0" (node_2) is false
+[20:36:38.734] [bmv2] [D] [thread 22221] [19.0] [cxt 0] Pipeline 'ingress': end
+[20:36:38.734] [bmv2] [D] [thread 22221] [19.0] [cxt 0] Egress port is 0
+[20:36:38.734] [bmv2] [D] [thread 22222] [19.0] [cxt 0] Pipeline 'egress': start
+[20:36:38.734] [bmv2] [T] [thread 22222] [19.0] [cxt 0] milestone1.p4(217) Condition "hdr.ecmp.is_load_balance == 1" (node_9) is false
+[20:36:38.734] [bmv2] [D] [thread 22222] [19.0] [cxt 0] Pipeline 'egress': end
+[20:36:38.734] [bmv2] [D] [thread 22222] [19.0] [cxt 0] Deparser 'deparser': start
+[20:36:38.734] [bmv2] [D] [thread 22222] [19.0] [cxt 0] Updating checksum 'cksum'
+[20:36:38.734] [bmv2] [D] [thread 22222] [19.0] [cxt 0] Deparsing header 'ethernet'
+[20:36:38.734] [bmv2] [D] [thread 22222] [19.0] [cxt 0] Deparsing header 'ecmp'
+[20:36:38.734] [bmv2] [D] [thread 22222] [19.0] [cxt 0] Deparsing header 'ipv4'
+[20:36:38.734] [bmv2] [D] [thread 22222] [19.0] [cxt 0] Deparsing header 'tcp'
+[20:36:38.734] [bmv2] [D] [thread 22222] [19.0] [cxt 0] Deparser 'deparser': end
+[20:36:38.734] [bmv2] [D] [thread 22226] [19.0] [cxt 0] Transmitting packet of size 107 out of port 0
+[20:36:39.223] [bmv2] [D] [thread 22221] [20.0] [cxt 0] Processing packet received on port 1
+[20:36:39.223] [bmv2] [D] [thread 22221] [20.0] [cxt 0] Parser 'parser': start
+[20:36:39.223] [bmv2] [D] [thread 22221] [20.0] [cxt 0] Parser 'parser' entering state 'start'
+[20:36:39.223] [bmv2] [D] [thread 22221] [20.0] [cxt 0] Extracting header 'ethernet'
+[20:36:39.223] [bmv2] [D] [thread 22221] [20.0] [cxt 0] Extracting header 'ecmp'
+[20:36:39.223] [bmv2] [D] [thread 22221] [20.0] [cxt 0] Extracting header 'ipv4'
+[20:36:39.223] [bmv2] [D] [thread 22221] [20.0] [cxt 0] Extracting header 'tcp'
+[20:36:39.223] [bmv2] [D] [thread 22221] [20.0] [cxt 0] Parser state 'start' has no switch, going to default next state
+[20:36:39.223] [bmv2] [T] [thread 22221] [20.0] [cxt 0] Bytes parsed: 58
+[20:36:39.223] [bmv2] [D] [thread 22221] [20.0] [cxt 0] Parser 'parser': end
+[20:36:39.223] [bmv2] [D] [thread 22221] [20.0] [cxt 0] Pipeline 'ingress': start
+[20:36:39.223] [bmv2] [T] [thread 22221] [20.0] [cxt 0] milestone1.p4(178) Condition "hdr.ipv4.isValid() && hdr.ipv4.ttl > 0" (node_2) is false
+[20:36:39.223] [bmv2] [D] [thread 22221] [20.0] [cxt 0] Pipeline 'ingress': end
+[20:36:39.223] [bmv2] [D] [thread 22221] [20.0] [cxt 0] Egress port is 0
+[20:36:39.223] [bmv2] [D] [thread 22222] [20.0] [cxt 0] Pipeline 'egress': start
+[20:36:39.223] [bmv2] [T] [thread 22222] [20.0] [cxt 0] milestone1.p4(217) Condition "hdr.ecmp.is_load_balance == 1" (node_9) is false
+[20:36:39.223] [bmv2] [D] [thread 22222] [20.0] [cxt 0] Pipeline 'egress': end
+[20:36:39.223] [bmv2] [D] [thread 22222] [20.0] [cxt 0] Deparser 'deparser': start
+[20:36:39.223] [bmv2] [D] [thread 22222] [20.0] [cxt 0] Updating checksum 'cksum'
+[20:36:39.223] [bmv2] [D] [thread 22222] [20.0] [cxt 0] Deparsing header 'ethernet'
+[20:36:39.223] [bmv2] [D] [thread 22222] [20.0] [cxt 0] Deparsing header 'ecmp'
+[20:36:39.223] [bmv2] [D] [thread 22222] [20.0] [cxt 0] Deparsing header 'ipv4'
+[20:36:39.223] [bmv2] [D] [thread 22222] [20.0] [cxt 0] Deparsing header 'tcp'
+[20:36:39.223] [bmv2] [D] [thread 22222] [20.0] [cxt 0] Deparser 'deparser': end
+[20:36:39.223] [bmv2] [D] [thread 22226] [20.0] [cxt 0] Transmitting packet of size 107 out of port 0
+[20:36:39.490] [bmv2] [D] [thread 22221] [21.0] [cxt 0] Processing packet received on port 2
+[20:36:39.490] [bmv2] [D] [thread 22221] [21.0] [cxt 0] Parser 'parser': start
+[20:36:39.490] [bmv2] [D] [thread 22221] [21.0] [cxt 0] Parser 'parser' entering state 'start'
+[20:36:39.490] [bmv2] [D] [thread 22221] [21.0] [cxt 0] Extracting header 'ethernet'
+[20:36:39.490] [bmv2] [D] [thread 22221] [21.0] [cxt 0] Extracting header 'ecmp'
+[20:36:39.490] [bmv2] [D] [thread 22221] [21.0] [cxt 0] Extracting header 'ipv4'
+[20:36:39.490] [bmv2] [D] [thread 22221] [21.0] [cxt 0] Extracting header 'tcp'
+[20:36:39.490] [bmv2] [D] [thread 22221] [21.0] [cxt 0] Parser state 'start' has no switch, going to default next state
+[20:36:39.490] [bmv2] [T] [thread 22221] [21.0] [cxt 0] Bytes parsed: 58
+[20:36:39.490] [bmv2] [D] [thread 22221] [21.0] [cxt 0] Parser 'parser': end
+[20:36:39.490] [bmv2] [D] [thread 22221] [21.0] [cxt 0] Pipeline 'ingress': start
+[20:36:39.490] [bmv2] [T] [thread 22221] [21.0] [cxt 0] milestone1.p4(178) Condition "hdr.ipv4.isValid() && hdr.ipv4.ttl > 0" (node_2) is false
+[20:36:39.490] [bmv2] [D] [thread 22221] [21.0] [cxt 0] Pipeline 'ingress': end
+[20:36:39.490] [bmv2] [D] [thread 22221] [21.0] [cxt 0] Egress port is 0
+[20:36:39.490] [bmv2] [D] [thread 22222] [21.0] [cxt 0] Pipeline 'egress': start
+[20:36:39.490] [bmv2] [T] [thread 22222] [21.0] [cxt 0] milestone1.p4(217) Condition "hdr.ecmp.is_load_balance == 1" (node_9) is false
+[20:36:39.490] [bmv2] [D] [thread 22222] [21.0] [cxt 0] Pipeline 'egress': end
+[20:36:39.490] [bmv2] [D] [thread 22222] [21.0] [cxt 0] Deparser 'deparser': start
+[20:36:39.490] [bmv2] [D] [thread 22222] [21.0] [cxt 0] Updating checksum 'cksum'
+[20:36:39.490] [bmv2] [D] [thread 22222] [21.0] [cxt 0] Deparsing header 'ethernet'
+[20:36:39.490] [bmv2] [D] [thread 22222] [21.0] [cxt 0] Deparsing header 'ecmp'
+[20:36:39.490] [bmv2] [D] [thread 22222] [21.0] [cxt 0] Deparsing header 'ipv4'
+[20:36:39.490] [bmv2] [D] [thread 22222] [21.0] [cxt 0] Deparsing header 'tcp'
+[20:36:39.490] [bmv2] [D] [thread 22222] [21.0] [cxt 0] Deparser 'deparser': end
+[20:36:39.490] [bmv2] [D] [thread 22226] [21.0] [cxt 0] Transmitting packet of size 70 out of port 0
+[20:36:39.640] [bmv2] [D] [thread 22221] [22.0] [cxt 0] Processing packet received on port 1
+[20:36:39.640] [bmv2] [D] [thread 22221] [22.0] [cxt 0] Parser 'parser': start
+[20:36:39.640] [bmv2] [D] [thread 22221] [22.0] [cxt 0] Parser 'parser' entering state 'start'
+[20:36:39.640] [bmv2] [D] [thread 22221] [22.0] [cxt 0] Extracting header 'ethernet'
+[20:36:39.640] [bmv2] [D] [thread 22221] [22.0] [cxt 0] Extracting header 'ecmp'
+[20:36:39.640] [bmv2] [D] [thread 22221] [22.0] [cxt 0] Extracting header 'ipv4'
+[20:36:39.640] [bmv2] [D] [thread 22221] [22.0] [cxt 0] Extracting header 'tcp'
+[20:36:39.640] [bmv2] [D] [thread 22221] [22.0] [cxt 0] Parser state 'start' has no switch, going to default next state
+[20:36:39.640] [bmv2] [T] [thread 22221] [22.0] [cxt 0] Bytes parsed: 58
+[20:36:39.640] [bmv2] [D] [thread 22221] [22.0] [cxt 0] Parser 'parser': end
+[20:36:39.640] [bmv2] [D] [thread 22221] [22.0] [cxt 0] Pipeline 'ingress': start
+[20:36:39.640] [bmv2] [T] [thread 22221] [22.0] [cxt 0] milestone1.p4(178) Condition "hdr.ipv4.isValid() && hdr.ipv4.ttl > 0" (node_2) is false
+[20:36:39.640] [bmv2] [D] [thread 22221] [22.0] [cxt 0] Pipeline 'ingress': end
+[20:36:39.640] [bmv2] [D] [thread 22221] [22.0] [cxt 0] Egress port is 0
+[20:36:39.640] [bmv2] [D] [thread 22221] [23.0] [cxt 0] Processing packet received on port 2
+[20:36:39.640] [bmv2] [D] [thread 22221] [23.0] [cxt 0] Parser 'parser': start
+[20:36:39.640] [bmv2] [D] [thread 22221] [23.0] [cxt 0] Parser 'parser' entering state 'start'
+[20:36:39.640] [bmv2] [D] [thread 22221] [23.0] [cxt 0] Extracting header 'ethernet'
+[20:36:39.640] [bmv2] [D] [thread 22221] [23.0] [cxt 0] Extracting header 'ecmp'
+[20:36:39.640] [bmv2] [D] [thread 22221] [23.0] [cxt 0] Extracting header 'ipv4'
+[20:36:39.640] [bmv2] [D] [thread 22221] [23.0] [cxt 0] Extracting header 'tcp'
+[20:36:39.640] [bmv2] [D] [thread 22221] [23.0] [cxt 0] Parser state 'start' has no switch, going to default next state
+[20:36:39.640] [bmv2] [T] [thread 22221] [23.0] [cxt 0] Bytes parsed: 58
+[20:36:39.640] [bmv2] [D] [thread 22221] [23.0] [cxt 0] Parser 'parser': end
+[20:36:39.640] [bmv2] [D] [thread 22221] [23.0] [cxt 0] Pipeline 'ingress': start
+[20:36:39.640] [bmv2] [T] [thread 22221] [23.0] [cxt 0] milestone1.p4(178) Condition "hdr.ipv4.isValid() && hdr.ipv4.ttl > 0" (node_2) is false
+[20:36:39.640] [bmv2] [D] [thread 22221] [23.0] [cxt 0] Pipeline 'ingress': end
+[20:36:39.640] [bmv2] [D] [thread 22221] [23.0] [cxt 0] Egress port is 0
+[20:36:39.640] [bmv2] [D] [thread 22222] [22.0] [cxt 0] Pipeline 'egress': start
+[20:36:39.640] [bmv2] [T] [thread 22222] [22.0] [cxt 0] milestone1.p4(217) Condition "hdr.ecmp.is_load_balance == 1" (node_9) is false
+[20:36:39.640] [bmv2] [D] [thread 22222] [22.0] [cxt 0] Pipeline 'egress': end
+[20:36:39.640] [bmv2] [D] [thread 22222] [22.0] [cxt 0] Deparser 'deparser': start
+[20:36:39.640] [bmv2] [D] [thread 22222] [22.0] [cxt 0] Updating checksum 'cksum'
+[20:36:39.640] [bmv2] [D] [thread 22222] [22.0] [cxt 0] Deparsing header 'ethernet'
+[20:36:39.640] [bmv2] [D] [thread 22222] [22.0] [cxt 0] Deparsing header 'ecmp'
+[20:36:39.640] [bmv2] [D] [thread 22222] [22.0] [cxt 0] Deparsing header 'ipv4'
+[20:36:39.640] [bmv2] [D] [thread 22222] [22.0] [cxt 0] Deparsing header 'tcp'
+[20:36:39.640] [bmv2] [D] [thread 22222] [22.0] [cxt 0] Deparser 'deparser': end
+[20:36:39.640] [bmv2] [D] [thread 22222] [23.0] [cxt 0] Pipeline 'egress': start
+[20:36:39.640] [bmv2] [T] [thread 22222] [23.0] [cxt 0] milestone1.p4(217) Condition "hdr.ecmp.is_load_balance == 1" (node_9) is false
+[20:36:39.640] [bmv2] [D] [thread 22222] [23.0] [cxt 0] Pipeline 'egress': end
+[20:36:39.640] [bmv2] [D] [thread 22222] [23.0] [cxt 0] Deparser 'deparser': start
+[20:36:39.640] [bmv2] [D] [thread 22222] [23.0] [cxt 0] Updating checksum 'cksum'
+[20:36:39.640] [bmv2] [D] [thread 22222] [23.0] [cxt 0] Deparsing header 'ethernet'
+[20:36:39.640] [bmv2] [D] [thread 22222] [23.0] [cxt 0] Deparsing header 'ecmp'
+[20:36:39.640] [bmv2] [D] [thread 22222] [23.0] [cxt 0] Deparsing header 'ipv4'
+[20:36:39.640] [bmv2] [D] [thread 22222] [23.0] [cxt 0] Deparsing header 'tcp'
+[20:36:39.640] [bmv2] [D] [thread 22222] [23.0] [cxt 0] Deparser 'deparser': end
+[20:36:39.640] [bmv2] [D] [thread 22226] [22.0] [cxt 0] Transmitting packet of size 70 out of port 0
+[20:36:39.640] [bmv2] [D] [thread 22226] [23.0] [cxt 0] Transmitting packet of size 70 out of port 0
+[20:36:39.724] [bmv2] [D] [thread 22221] [24.0] [cxt 0] Processing packet received on port 2
+[20:36:39.725] [bmv2] [D] [thread 22221] [24.0] [cxt 0] Parser 'parser': start
+[20:36:39.725] [bmv2] [D] [thread 22221] [24.0] [cxt 0] Parser 'parser' entering state 'start'
+[20:36:39.725] [bmv2] [D] [thread 22221] [24.0] [cxt 0] Extracting header 'ethernet'
+[20:36:39.725] [bmv2] [D] [thread 22221] [24.0] [cxt 0] Extracting header 'ecmp'
+[20:36:39.725] [bmv2] [D] [thread 22221] [24.0] [cxt 0] Extracting header 'ipv4'
+[20:36:39.725] [bmv2] [D] [thread 22221] [24.0] [cxt 0] Extracting header 'tcp'
+[20:36:39.725] [bmv2] [D] [thread 22221] [24.0] [cxt 0] Parser state 'start' has no switch, going to default next state
+[20:36:39.725] [bmv2] [T] [thread 22221] [24.0] [cxt 0] Bytes parsed: 58
+[20:36:39.725] [bmv2] [D] [thread 22221] [24.0] [cxt 0] Parser 'parser': end
+[20:36:39.725] [bmv2] [D] [thread 22221] [24.0] [cxt 0] Pipeline 'ingress': start
+[20:36:39.725] [bmv2] [T] [thread 22221] [24.0] [cxt 0] milestone1.p4(178) Condition "hdr.ipv4.isValid() && hdr.ipv4.ttl > 0" (node_2) is false
+[20:36:39.725] [bmv2] [D] [thread 22221] [24.0] [cxt 0] Pipeline 'ingress': end
+[20:36:39.725] [bmv2] [D] [thread 22221] [24.0] [cxt 0] Egress port is 0
+[20:36:39.725] [bmv2] [D] [thread 22222] [24.0] [cxt 0] Pipeline 'egress': start
+[20:36:39.725] [bmv2] [T] [thread 22222] [24.0] [cxt 0] milestone1.p4(217) Condition "hdr.ecmp.is_load_balance == 1" (node_9) is false
+[20:36:39.725] [bmv2] [D] [thread 22222] [24.0] [cxt 0] Pipeline 'egress': end
+[20:36:39.725] [bmv2] [D] [thread 22222] [24.0] [cxt 0] Deparser 'deparser': start
+[20:36:39.725] [bmv2] [D] [thread 22222] [24.0] [cxt 0] Updating checksum 'cksum'
+[20:36:39.725] [bmv2] [D] [thread 22222] [24.0] [cxt 0] Deparsing header 'ethernet'
+[20:36:39.725] [bmv2] [D] [thread 22222] [24.0] [cxt 0] Deparsing header 'ecmp'
+[20:36:39.725] [bmv2] [D] [thread 22222] [24.0] [cxt 0] Deparsing header 'ipv4'
+[20:36:39.725] [bmv2] [D] [thread 22222] [24.0] [cxt 0] Deparsing header 'tcp'
+[20:36:39.725] [bmv2] [D] [thread 22222] [24.0] [cxt 0] Deparser 'deparser': end
+[20:36:39.725] [bmv2] [D] [thread 22226] [24.0] [cxt 0] Transmitting packet of size 196 out of port 0
+[20:36:39.884] [bmv2] [D] [thread 22221] [25.0] [cxt 0] Processing packet received on port 1
+[20:36:39.884] [bmv2] [D] [thread 22221] [25.0] [cxt 0] Parser 'parser': start
+[20:36:39.884] [bmv2] [D] [thread 22221] [25.0] [cxt 0] Parser 'parser' entering state 'start'
+[20:36:39.884] [bmv2] [D] [thread 22221] [25.0] [cxt 0] Extracting header 'ethernet'
+[20:36:39.884] [bmv2] [D] [thread 22221] [25.0] [cxt 0] Extracting header 'ecmp'
+[20:36:39.884] [bmv2] [D] [thread 22221] [25.0] [cxt 0] Extracting header 'ipv4'
+[20:36:39.884] [bmv2] [D] [thread 22221] [25.0] [cxt 0] Extracting header 'tcp'
+[20:36:39.884] [bmv2] [D] [thread 22221] [25.0] [cxt 0] Parser state 'start' has no switch, going to default next state
+[20:36:39.884] [bmv2] [T] [thread 22221] [25.0] [cxt 0] Bytes parsed: 58
+[20:36:39.884] [bmv2] [D] [thread 22221] [25.0] [cxt 0] Parser 'parser': end
+[20:36:39.884] [bmv2] [D] [thread 22221] [25.0] [cxt 0] Pipeline 'ingress': start
+[20:36:39.884] [bmv2] [T] [thread 22221] [25.0] [cxt 0] milestone1.p4(178) Condition "hdr.ipv4.isValid() && hdr.ipv4.ttl > 0" (node_2) is false
+[20:36:39.884] [bmv2] [D] [thread 22221] [25.0] [cxt 0] Pipeline 'ingress': end
+[20:36:39.884] [bmv2] [D] [thread 22221] [25.0] [cxt 0] Egress port is 0
+[20:36:39.884] [bmv2] [D] [thread 22221] [26.0] [cxt 0] Processing packet received on port 2
+[20:36:39.884] [bmv2] [D] [thread 22221] [26.0] [cxt 0] Parser 'parser': start
+[20:36:39.884] [bmv2] [D] [thread 22221] [26.0] [cxt 0] Parser 'parser' entering state 'start'
+[20:36:39.884] [bmv2] [D] [thread 22221] [26.0] [cxt 0] Extracting header 'ethernet'
+[20:36:39.884] [bmv2] [D] [thread 22221] [26.0] [cxt 0] Extracting header 'ecmp'
+[20:36:39.884] [bmv2] [D] [thread 22221] [26.0] [cxt 0] Extracting header 'ipv4'
+[20:36:39.884] [bmv2] [D] [thread 22221] [26.0] [cxt 0] Extracting header 'tcp'
+[20:36:39.884] [bmv2] [D] [thread 22221] [26.0] [cxt 0] Parser state 'start' has no switch, going to default next state
+[20:36:39.884] [bmv2] [T] [thread 22221] [26.0] [cxt 0] Bytes parsed: 58
+[20:36:39.884] [bmv2] [D] [thread 22221] [26.0] [cxt 0] Parser 'parser': end
+[20:36:39.884] [bmv2] [D] [thread 22221] [26.0] [cxt 0] Pipeline 'ingress': start
+[20:36:39.884] [bmv2] [T] [thread 22221] [26.0] [cxt 0] milestone1.p4(178) Condition "hdr.ipv4.isValid() && hdr.ipv4.ttl > 0" (node_2) is false
+[20:36:39.884] [bmv2] [D] [thread 22221] [26.0] [cxt 0] Pipeline 'ingress': end
+[20:36:39.884] [bmv2] [D] [thread 22221] [26.0] [cxt 0] Egress port is 0
+[20:36:39.884] [bmv2] [D] [thread 22222] [25.0] [cxt 0] Pipeline 'egress': start
+[20:36:39.884] [bmv2] [T] [thread 22222] [25.0] [cxt 0] milestone1.p4(217) Condition "hdr.ecmp.is_load_balance == 1" (node_9) is false
+[20:36:39.884] [bmv2] [D] [thread 22222] [25.0] [cxt 0] Pipeline 'egress': end
+[20:36:39.884] [bmv2] [D] [thread 22222] [25.0] [cxt 0] Deparser 'deparser': start
+[20:36:39.884] [bmv2] [D] [thread 22222] [25.0] [cxt 0] Updating checksum 'cksum'
+[20:36:39.884] [bmv2] [D] [thread 22222] [25.0] [cxt 0] Deparsing header 'ethernet'
+[20:36:39.884] [bmv2] [D] [thread 22222] [25.0] [cxt 0] Deparsing header 'ecmp'
+[20:36:39.884] [bmv2] [D] [thread 22222] [25.0] [cxt 0] Deparsing header 'ipv4'
+[20:36:39.884] [bmv2] [D] [thread 22222] [25.0] [cxt 0] Deparsing header 'tcp'
+[20:36:39.884] [bmv2] [D] [thread 22222] [25.0] [cxt 0] Deparser 'deparser': end
+[20:36:39.884] [bmv2] [D] [thread 22222] [26.0] [cxt 0] Pipeline 'egress': start
+[20:36:39.884] [bmv2] [T] [thread 22222] [26.0] [cxt 0] milestone1.p4(217) Condition "hdr.ecmp.is_load_balance == 1" (node_9) is false
+[20:36:39.884] [bmv2] [D] [thread 22222] [26.0] [cxt 0] Pipeline 'egress': end
+[20:36:39.884] [bmv2] [D] [thread 22222] [26.0] [cxt 0] Deparser 'deparser': start
+[20:36:39.884] [bmv2] [D] [thread 22222] [26.0] [cxt 0] Updating checksum 'cksum'
+[20:36:39.884] [bmv2] [D] [thread 22222] [26.0] [cxt 0] Deparsing header 'ethernet'
+[20:36:39.884] [bmv2] [D] [thread 22222] [26.0] [cxt 0] Deparsing header 'ecmp'
+[20:36:39.884] [bmv2] [D] [thread 22222] [26.0] [cxt 0] Deparsing header 'ipv4'
+[20:36:39.884] [bmv2] [D] [thread 22222] [26.0] [cxt 0] Deparsing header 'tcp'
+[20:36:39.884] [bmv2] [D] [thread 22222] [26.0] [cxt 0] Deparser 'deparser': end
+[20:36:39.884] [bmv2] [D] [thread 22226] [25.0] [cxt 0] Transmitting packet of size 196 out of port 0
+[20:36:39.884] [bmv2] [D] [thread 22226] [26.0] [cxt 0] Transmitting packet of size 196 out of port 0
+[20:36:40.119] [bmv2] [D] [thread 22221] [27.0] [cxt 0] Processing packet received on port 1
+[20:36:40.120] [bmv2] [D] [thread 22221] [27.0] [cxt 0] Parser 'parser': start
+[20:36:40.120] [bmv2] [D] [thread 22221] [27.0] [cxt 0] Parser 'parser' entering state 'start'
+[20:36:40.120] [bmv2] [D] [thread 22221] [27.0] [cxt 0] Extracting header 'ethernet'
+[20:36:40.120] [bmv2] [D] [thread 22221] [27.0] [cxt 0] Extracting header 'ecmp'
+[20:36:40.120] [bmv2] [D] [thread 22221] [27.0] [cxt 0] Extracting header 'ipv4'
+[20:36:40.120] [bmv2] [D] [thread 22221] [27.0] [cxt 0] Extracting header 'tcp'
+[20:36:40.120] [bmv2] [D] [thread 22221] [27.0] [cxt 0] Parser state 'start' has no switch, going to default next state
+[20:36:40.120] [bmv2] [T] [thread 22221] [27.0] [cxt 0] Bytes parsed: 58
+[20:36:40.120] [bmv2] [D] [thread 22221] [27.0] [cxt 0] Parser 'parser': end
+[20:36:40.120] [bmv2] [D] [thread 22221] [27.0] [cxt 0] Pipeline 'ingress': start
+[20:36:40.120] [bmv2] [T] [thread 22221] [27.0] [cxt 0] milestone1.p4(178) Condition "hdr.ipv4.isValid() && hdr.ipv4.ttl > 0" (node_2) is false
+[20:36:40.120] [bmv2] [D] [thread 22221] [27.0] [cxt 0] Pipeline 'ingress': end
+[20:36:40.120] [bmv2] [D] [thread 22221] [27.0] [cxt 0] Egress port is 0
+[20:36:40.120] [bmv2] [D] [thread 22222] [27.0] [cxt 0] Pipeline 'egress': start
+[20:36:40.120] [bmv2] [T] [thread 22222] [27.0] [cxt 0] milestone1.p4(217) Condition "hdr.ecmp.is_load_balance == 1" (node_9) is false
+[20:36:40.120] [bmv2] [D] [thread 22222] [27.0] [cxt 0] Pipeline 'egress': end
+[20:36:40.120] [bmv2] [D] [thread 22222] [27.0] [cxt 0] Deparser 'deparser': start
+[20:36:40.120] [bmv2] [D] [thread 22222] [27.0] [cxt 0] Updating checksum 'cksum'
+[20:36:40.120] [bmv2] [D] [thread 22222] [27.0] [cxt 0] Deparsing header 'ethernet'
+[20:36:40.120] [bmv2] [D] [thread 22222] [27.0] [cxt 0] Deparsing header 'ecmp'
+[20:36:40.120] [bmv2] [D] [thread 22222] [27.0] [cxt 0] Deparsing header 'ipv4'
+[20:36:40.120] [bmv2] [D] [thread 22222] [27.0] [cxt 0] Deparsing header 'tcp'
+[20:36:40.120] [bmv2] [D] [thread 22222] [27.0] [cxt 0] Deparser 'deparser': end
+[20:36:40.120] [bmv2] [D] [thread 22226] [27.0] [cxt 0] Transmitting packet of size 70 out of port 0
+[20:36:40.369] [bmv2] [D] [thread 22221] [28.0] [cxt 0] Processing packet received on port 1
+[20:36:40.369] [bmv2] [D] [thread 22221] [28.0] [cxt 0] Parser 'parser': start
+[20:36:40.369] [bmv2] [D] [thread 22221] [28.0] [cxt 0] Parser 'parser' entering state 'start'
+[20:36:40.369] [bmv2] [D] [thread 22221] [28.0] [cxt 0] Extracting header 'ethernet'
+[20:36:40.369] [bmv2] [D] [thread 22221] [28.0] [cxt 0] Extracting header 'ecmp'
+[20:36:40.369] [bmv2] [D] [thread 22221] [28.0] [cxt 0] Extracting header 'ipv4'
+[20:36:40.369] [bmv2] [D] [thread 22221] [28.0] [cxt 0] Extracting header 'tcp'
+[20:36:40.369] [bmv2] [D] [thread 22221] [28.0] [cxt 0] Parser state 'start' has no switch, going to default next state
+[20:36:40.369] [bmv2] [T] [thread 22221] [28.0] [cxt 0] Bytes parsed: 58
+[20:36:40.369] [bmv2] [D] [thread 22221] [28.0] [cxt 0] Parser 'parser': end
+[20:36:40.369] [bmv2] [D] [thread 22221] [28.0] [cxt 0] Pipeline 'ingress': start
+[20:36:40.369] [bmv2] [T] [thread 22221] [28.0] [cxt 0] milestone1.p4(178) Condition "hdr.ipv4.isValid() && hdr.ipv4.ttl > 0" (node_2) is false
+[20:36:40.369] [bmv2] [D] [thread 22221] [28.0] [cxt 0] Pipeline 'ingress': end
+[20:36:40.369] [bmv2] [D] [thread 22221] [28.0] [cxt 0] Egress port is 0
+[20:36:40.369] [bmv2] [D] [thread 22222] [28.0] [cxt 0] Pipeline 'egress': start
+[20:36:40.369] [bmv2] [T] [thread 22222] [28.0] [cxt 0] milestone1.p4(217) Condition "hdr.ecmp.is_load_balance == 1" (node_9) is false
+[20:36:40.369] [bmv2] [D] [thread 22222] [28.0] [cxt 0] Pipeline 'egress': end
+[20:36:40.369] [bmv2] [D] [thread 22222] [28.0] [cxt 0] Deparser 'deparser': start
+[20:36:40.369] [bmv2] [D] [thread 22222] [28.0] [cxt 0] Updating checksum 'cksum'
+[20:36:40.369] [bmv2] [D] [thread 22222] [28.0] [cxt 0] Deparsing header 'ethernet'
+[20:36:40.369] [bmv2] [D] [thread 22222] [28.0] [cxt 0] Deparsing header 'ecmp'
+[20:36:40.369] [bmv2] [D] [thread 22222] [28.0] [cxt 0] Deparsing header 'ipv4'
+[20:36:40.369] [bmv2] [D] [thread 22222] [28.0] [cxt 0] Deparsing header 'tcp'
+[20:36:40.369] [bmv2] [D] [thread 22222] [28.0] [cxt 0] Deparser 'deparser': end
+[20:36:40.369] [bmv2] [D] [thread 22226] [28.0] [cxt 0] Transmitting packet of size 196 out of port 0
+[20:36:42.598] [bmv2] [D] [thread 22221] [29.0] [cxt 0] Processing packet received on port 2
+[20:36:42.598] [bmv2] [D] [thread 22221] [29.0] [cxt 0] Parser 'parser': start
+[20:36:42.598] [bmv2] [D] [thread 22221] [29.0] [cxt 0] Parser 'parser' entering state 'start'
+[20:36:42.598] [bmv2] [D] [thread 22221] [29.0] [cxt 0] Extracting header 'ethernet'
+[20:36:42.598] [bmv2] [D] [thread 22221] [29.0] [cxt 0] Extracting header 'ecmp'
+[20:36:42.598] [bmv2] [D] [thread 22221] [29.0] [cxt 0] Extracting header 'ipv4'
+[20:36:42.598] [bmv2] [D] [thread 22221] [29.0] [cxt 0] Extracting header 'tcp'
+[20:36:42.598] [bmv2] [D] [thread 22221] [29.0] [cxt 0] Parser state 'start' has no switch, going to default next state
+[20:36:42.598] [bmv2] [T] [thread 22221] [29.0] [cxt 0] Bytes parsed: 58
+[20:36:42.598] [bmv2] [D] [thread 22221] [29.0] [cxt 0] Parser 'parser': end
+[20:36:42.598] [bmv2] [D] [thread 22221] [29.0] [cxt 0] Pipeline 'ingress': start
+[20:36:42.598] [bmv2] [T] [thread 22221] [29.0] [cxt 0] milestone1.p4(178) Condition "hdr.ipv4.isValid() && hdr.ipv4.ttl > 0" (node_2) is false
+[20:36:42.598] [bmv2] [D] [thread 22221] [29.0] [cxt 0] Pipeline 'ingress': end
+[20:36:42.598] [bmv2] [D] [thread 22221] [29.0] [cxt 0] Egress port is 0
+[20:36:42.598] [bmv2] [D] [thread 22222] [29.0] [cxt 0] Pipeline 'egress': start
+[20:36:42.598] [bmv2] [T] [thread 22222] [29.0] [cxt 0] milestone1.p4(217) Condition "hdr.ecmp.is_load_balance == 1" (node_9) is false
+[20:36:42.598] [bmv2] [D] [thread 22222] [29.0] [cxt 0] Pipeline 'egress': end
+[20:36:42.598] [bmv2] [D] [thread 22222] [29.0] [cxt 0] Deparser 'deparser': start
+[20:36:42.598] [bmv2] [D] [thread 22222] [29.0] [cxt 0] Updating checksum 'cksum'
+[20:36:42.598] [bmv2] [D] [thread 22222] [29.0] [cxt 0] Deparsing header 'ethernet'
+[20:36:42.598] [bmv2] [D] [thread 22222] [29.0] [cxt 0] Deparsing header 'ecmp'
+[20:36:42.598] [bmv2] [D] [thread 22222] [29.0] [cxt 0] Deparsing header 'ipv4'
+[20:36:42.598] [bmv2] [D] [thread 22222] [29.0] [cxt 0] Deparsing header 'tcp'
+[20:36:42.598] [bmv2] [D] [thread 22222] [29.0] [cxt 0] Deparser 'deparser': end
+[20:36:42.598] [bmv2] [D] [thread 22226] [29.0] [cxt 0] Transmitting packet of size 107 out of port 0
+[20:36:42.736] [bmv2] [D] [thread 22221] [30.0] [cxt 0] Processing packet received on port 1
+[20:36:42.736] [bmv2] [D] [thread 22221] [30.0] [cxt 0] Parser 'parser': start
+[20:36:42.736] [bmv2] [D] [thread 22221] [30.0] [cxt 0] Parser 'parser' entering state 'start'
+[20:36:42.736] [bmv2] [D] [thread 22221] [30.0] [cxt 0] Extracting header 'ethernet'
+[20:36:42.736] [bmv2] [D] [thread 22221] [30.0] [cxt 0] Extracting header 'ecmp'
+[20:36:42.736] [bmv2] [D] [thread 22221] [30.0] [cxt 0] Extracting header 'ipv4'
+[20:36:42.736] [bmv2] [D] [thread 22221] [30.0] [cxt 0] Extracting header 'tcp'
+[20:36:42.736] [bmv2] [D] [thread 22221] [30.0] [cxt 0] Parser state 'start' has no switch, going to default next state
+[20:36:42.736] [bmv2] [T] [thread 22221] [30.0] [cxt 0] Bytes parsed: 58
+[20:36:42.736] [bmv2] [D] [thread 22221] [30.0] [cxt 0] Parser 'parser': end
+[20:36:42.736] [bmv2] [D] [thread 22221] [30.0] [cxt 0] Pipeline 'ingress': start
+[20:36:42.736] [bmv2] [T] [thread 22221] [30.0] [cxt 0] milestone1.p4(178) Condition "hdr.ipv4.isValid() && hdr.ipv4.ttl > 0" (node_2) is false
+[20:36:42.736] [bmv2] [D] [thread 22221] [30.0] [cxt 0] Pipeline 'ingress': end
+[20:36:42.736] [bmv2] [D] [thread 22221] [30.0] [cxt 0] Egress port is 0
+[20:36:42.736] [bmv2] [D] [thread 22222] [30.0] [cxt 0] Pipeline 'egress': start
+[20:36:42.736] [bmv2] [T] [thread 22222] [30.0] [cxt 0] milestone1.p4(217) Condition "hdr.ecmp.is_load_balance == 1" (node_9) is false
+[20:36:42.736] [bmv2] [D] [thread 22222] [30.0] [cxt 0] Pipeline 'egress': end
+[20:36:42.736] [bmv2] [D] [thread 22222] [30.0] [cxt 0] Deparser 'deparser': start
+[20:36:42.736] [bmv2] [D] [thread 22222] [30.0] [cxt 0] Updating checksum 'cksum'
+[20:36:42.736] [bmv2] [D] [thread 22222] [30.0] [cxt 0] Deparsing header 'ethernet'
+[20:36:42.736] [bmv2] [D] [thread 22222] [30.0] [cxt 0] Deparsing header 'ecmp'
+[20:36:42.736] [bmv2] [D] [thread 22222] [30.0] [cxt 0] Deparsing header 'ipv4'
+[20:36:42.736] [bmv2] [D] [thread 22222] [30.0] [cxt 0] Deparsing header 'tcp'
+[20:36:42.736] [bmv2] [D] [thread 22222] [30.0] [cxt 0] Deparser 'deparser': end
+[20:36:42.736] [bmv2] [D] [thread 22226] [30.0] [cxt 0] Transmitting packet of size 107 out of port 0
+[20:36:43.225] [bmv2] [D] [thread 22221] [31.0] [cxt 0] Processing packet received on port 1
+[20:36:43.225] [bmv2] [D] [thread 22221] [31.0] [cxt 0] Parser 'parser': start
+[20:36:43.225] [bmv2] [D] [thread 22221] [31.0] [cxt 0] Parser 'parser' entering state 'start'
+[20:36:43.225] [bmv2] [D] [thread 22221] [31.0] [cxt 0] Extracting header 'ethernet'
+[20:36:43.225] [bmv2] [D] [thread 22221] [31.0] [cxt 0] Extracting header 'ecmp'
+[20:36:43.225] [bmv2] [D] [thread 22221] [31.0] [cxt 0] Extracting header 'ipv4'
+[20:36:43.225] [bmv2] [D] [thread 22221] [31.0] [cxt 0] Extracting header 'tcp'
+[20:36:43.225] [bmv2] [D] [thread 22221] [31.0] [cxt 0] Parser state 'start' has no switch, going to default next state
+[20:36:43.225] [bmv2] [T] [thread 22221] [31.0] [cxt 0] Bytes parsed: 58
+[20:36:43.225] [bmv2] [D] [thread 22221] [31.0] [cxt 0] Parser 'parser': end
+[20:36:43.225] [bmv2] [D] [thread 22221] [31.0] [cxt 0] Pipeline 'ingress': start
+[20:36:43.225] [bmv2] [T] [thread 22221] [31.0] [cxt 0] milestone1.p4(178) Condition "hdr.ipv4.isValid() && hdr.ipv4.ttl > 0" (node_2) is false
+[20:36:43.225] [bmv2] [D] [thread 22221] [31.0] [cxt 0] Pipeline 'ingress': end
+[20:36:43.225] [bmv2] [D] [thread 22221] [31.0] [cxt 0] Egress port is 0
+[20:36:43.225] [bmv2] [D] [thread 22222] [31.0] [cxt 0] Pipeline 'egress': start
+[20:36:43.225] [bmv2] [T] [thread 22222] [31.0] [cxt 0] milestone1.p4(217) Condition "hdr.ecmp.is_load_balance == 1" (node_9) is false
+[20:36:43.225] [bmv2] [D] [thread 22222] [31.0] [cxt 0] Pipeline 'egress': end
+[20:36:43.225] [bmv2] [D] [thread 22222] [31.0] [cxt 0] Deparser 'deparser': start
+[20:36:43.225] [bmv2] [D] [thread 22222] [31.0] [cxt 0] Updating checksum 'cksum'
+[20:36:43.225] [bmv2] [D] [thread 22222] [31.0] [cxt 0] Deparsing header 'ethernet'
+[20:36:43.225] [bmv2] [D] [thread 22222] [31.0] [cxt 0] Deparsing header 'ecmp'
+[20:36:43.225] [bmv2] [D] [thread 22222] [31.0] [cxt 0] Deparsing header 'ipv4'
+[20:36:43.225] [bmv2] [D] [thread 22222] [31.0] [cxt 0] Deparsing header 'tcp'
+[20:36:43.225] [bmv2] [D] [thread 22222] [31.0] [cxt 0] Deparser 'deparser': end
+[20:36:43.225] [bmv2] [D] [thread 22226] [31.0] [cxt 0] Transmitting packet of size 107 out of port 0
+[20:36:43.496] [bmv2] [D] [thread 22221] [32.0] [cxt 0] Processing packet received on port 2
+[20:36:43.496] [bmv2] [D] [thread 22221] [32.0] [cxt 0] Parser 'parser': start
+[20:36:43.496] [bmv2] [D] [thread 22221] [32.0] [cxt 0] Parser 'parser' entering state 'start'
+[20:36:43.496] [bmv2] [D] [thread 22221] [32.0] [cxt 0] Extracting header 'ethernet'
+[20:36:43.496] [bmv2] [D] [thread 22221] [32.0] [cxt 0] Extracting header 'ecmp'
+[20:36:43.496] [bmv2] [D] [thread 22221] [32.0] [cxt 0] Extracting header 'ipv4'
+[20:36:43.496] [bmv2] [D] [thread 22221] [32.0] [cxt 0] Extracting header 'tcp'
+[20:36:43.496] [bmv2] [D] [thread 22221] [32.0] [cxt 0] Parser state 'start' has no switch, going to default next state
+[20:36:43.496] [bmv2] [T] [thread 22221] [32.0] [cxt 0] Bytes parsed: 58
+[20:36:43.496] [bmv2] [D] [thread 22221] [32.0] [cxt 0] Parser 'parser': end
+[20:36:43.496] [bmv2] [D] [thread 22221] [32.0] [cxt 0] Pipeline 'ingress': start
+[20:36:43.496] [bmv2] [T] [thread 22221] [32.0] [cxt 0] milestone1.p4(178) Condition "hdr.ipv4.isValid() && hdr.ipv4.ttl > 0" (node_2) is false
+[20:36:43.496] [bmv2] [D] [thread 22221] [32.0] [cxt 0] Pipeline 'ingress': end
+[20:36:43.496] [bmv2] [D] [thread 22221] [32.0] [cxt 0] Egress port is 0
+[20:36:43.496] [bmv2] [D] [thread 22222] [32.0] [cxt 0] Pipeline 'egress': start
+[20:36:43.496] [bmv2] [T] [thread 22222] [32.0] [cxt 0] milestone1.p4(217) Condition "hdr.ecmp.is_load_balance == 1" (node_9) is false
+[20:36:43.496] [bmv2] [D] [thread 22222] [32.0] [cxt 0] Pipeline 'egress': end
+[20:36:43.496] [bmv2] [D] [thread 22222] [32.0] [cxt 0] Deparser 'deparser': start
+[20:36:43.496] [bmv2] [D] [thread 22222] [32.0] [cxt 0] Updating checksum 'cksum'
+[20:36:43.496] [bmv2] [D] [thread 22222] [32.0] [cxt 0] Deparsing header 'ethernet'
+[20:36:43.496] [bmv2] [D] [thread 22222] [32.0] [cxt 0] Deparsing header 'ecmp'
+[20:36:43.496] [bmv2] [D] [thread 22222] [32.0] [cxt 0] Deparsing header 'ipv4'
+[20:36:43.496] [bmv2] [D] [thread 22222] [32.0] [cxt 0] Deparsing header 'tcp'
+[20:36:43.496] [bmv2] [D] [thread 22222] [32.0] [cxt 0] Deparser 'deparser': end
+[20:36:43.496] [bmv2] [D] [thread 22226] [32.0] [cxt 0] Transmitting packet of size 70 out of port 0
+[20:36:43.648] [bmv2] [D] [thread 22221] [33.0] [cxt 0] Processing packet received on port 1
+[20:36:43.648] [bmv2] [D] [thread 22221] [33.0] [cxt 0] Parser 'parser': start
+[20:36:43.648] [bmv2] [D] [thread 22221] [33.0] [cxt 0] Parser 'parser' entering state 'start'
+[20:36:43.648] [bmv2] [D] [thread 22221] [33.0] [cxt 0] Extracting header 'ethernet'
+[20:36:43.648] [bmv2] [D] [thread 22221] [33.0] [cxt 0] Extracting header 'ecmp'
+[20:36:43.648] [bmv2] [D] [thread 22221] [33.0] [cxt 0] Extracting header 'ipv4'
+[20:36:43.648] [bmv2] [D] [thread 22221] [33.0] [cxt 0] Extracting header 'tcp'
+[20:36:43.648] [bmv2] [D] [thread 22221] [33.0] [cxt 0] Parser state 'start' has no switch, going to default next state
+[20:36:43.648] [bmv2] [T] [thread 22221] [33.0] [cxt 0] Bytes parsed: 58
+[20:36:43.648] [bmv2] [D] [thread 22221] [33.0] [cxt 0] Parser 'parser': end
+[20:36:43.648] [bmv2] [D] [thread 22221] [33.0] [cxt 0] Pipeline 'ingress': start
+[20:36:43.648] [bmv2] [T] [thread 22221] [33.0] [cxt 0] milestone1.p4(178) Condition "hdr.ipv4.isValid() && hdr.ipv4.ttl > 0" (node_2) is false
+[20:36:43.648] [bmv2] [D] [thread 22221] [33.0] [cxt 0] Pipeline 'ingress': end
+[20:36:43.648] [bmv2] [D] [thread 22221] [33.0] [cxt 0] Egress port is 0
+[20:36:43.648] [bmv2] [D] [thread 22221] [34.0] [cxt 0] Processing packet received on port 2
+[20:36:43.648] [bmv2] [D] [thread 22221] [34.0] [cxt 0] Parser 'parser': start
+[20:36:43.648] [bmv2] [D] [thread 22221] [34.0] [cxt 0] Parser 'parser' entering state 'start'
+[20:36:43.648] [bmv2] [D] [thread 22221] [34.0] [cxt 0] Extracting header 'ethernet'
+[20:36:43.648] [bmv2] [D] [thread 22221] [34.0] [cxt 0] Extracting header 'ecmp'
+[20:36:43.648] [bmv2] [D] [thread 22221] [34.0] [cxt 0] Extracting header 'ipv4'
+[20:36:43.648] [bmv2] [D] [thread 22221] [34.0] [cxt 0] Extracting header 'tcp'
+[20:36:43.648] [bmv2] [D] [thread 22221] [34.0] [cxt 0] Parser state 'start' has no switch, going to default next state
+[20:36:43.648] [bmv2] [T] [thread 22221] [34.0] [cxt 0] Bytes parsed: 58
+[20:36:43.648] [bmv2] [D] [thread 22221] [34.0] [cxt 0] Parser 'parser': end
+[20:36:43.648] [bmv2] [D] [thread 22221] [34.0] [cxt 0] Pipeline 'ingress': start
+[20:36:43.648] [bmv2] [T] [thread 22221] [34.0] [cxt 0] milestone1.p4(178) Condition "hdr.ipv4.isValid() && hdr.ipv4.ttl > 0" (node_2) is false
+[20:36:43.648] [bmv2] [D] [thread 22221] [34.0] [cxt 0] Pipeline 'ingress': end
+[20:36:43.648] [bmv2] [D] [thread 22221] [34.0] [cxt 0] Egress port is 0
+[20:36:43.648] [bmv2] [D] [thread 22222] [33.0] [cxt 0] Pipeline 'egress': start
+[20:36:43.648] [bmv2] [T] [thread 22222] [33.0] [cxt 0] milestone1.p4(217) Condition "hdr.ecmp.is_load_balance == 1" (node_9) is false
+[20:36:43.648] [bmv2] [D] [thread 22222] [33.0] [cxt 0] Pipeline 'egress': end
+[20:36:43.648] [bmv2] [D] [thread 22222] [33.0] [cxt 0] Deparser 'deparser': start
+[20:36:43.648] [bmv2] [D] [thread 22222] [33.0] [cxt 0] Updating checksum 'cksum'
+[20:36:43.648] [bmv2] [D] [thread 22222] [33.0] [cxt 0] Deparsing header 'ethernet'
+[20:36:43.648] [bmv2] [D] [thread 22222] [33.0] [cxt 0] Deparsing header 'ecmp'
+[20:36:43.648] [bmv2] [D] [thread 22222] [33.0] [cxt 0] Deparsing header 'ipv4'
+[20:36:43.648] [bmv2] [D] [thread 22222] [33.0] [cxt 0] Deparsing header 'tcp'
+[20:36:43.648] [bmv2] [D] [thread 22222] [33.0] [cxt 0] Deparser 'deparser': end
+[20:36:43.648] [bmv2] [D] [thread 22226] [33.0] [cxt 0] Transmitting packet of size 70 out of port 0
+[20:36:43.648] [bmv2] [D] [thread 22222] [34.0] [cxt 0] Pipeline 'egress': start
+[20:36:43.648] [bmv2] [T] [thread 22222] [34.0] [cxt 0] milestone1.p4(217) Condition "hdr.ecmp.is_load_balance == 1" (node_9) is false
+[20:36:43.648] [bmv2] [D] [thread 22222] [34.0] [cxt 0] Pipeline 'egress': end
+[20:36:43.648] [bmv2] [D] [thread 22222] [34.0] [cxt 0] Deparser 'deparser': start
+[20:36:43.648] [bmv2] [D] [thread 22222] [34.0] [cxt 0] Updating checksum 'cksum'
+[20:36:43.648] [bmv2] [D] [thread 22222] [34.0] [cxt 0] Deparsing header 'ethernet'
+[20:36:43.648] [bmv2] [D] [thread 22222] [34.0] [cxt 0] Deparsing header 'ecmp'
+[20:36:43.648] [bmv2] [D] [thread 22222] [34.0] [cxt 0] Deparsing header 'ipv4'
+[20:36:43.648] [bmv2] [D] [thread 22222] [34.0] [cxt 0] Deparsing header 'tcp'
+[20:36:43.648] [bmv2] [D] [thread 22222] [34.0] [cxt 0] Deparser 'deparser': end
+[20:36:43.648] [bmv2] [D] [thread 22226] [34.0] [cxt 0] Transmitting packet of size 70 out of port 0
+[20:36:44.128] [bmv2] [D] [thread 22221] [35.0] [cxt 0] Processing packet received on port 1
+[20:36:44.128] [bmv2] [D] [thread 22221] [35.0] [cxt 0] Parser 'parser': start
+[20:36:44.128] [bmv2] [D] [thread 22221] [35.0] [cxt 0] Parser 'parser' entering state 'start'
+[20:36:44.128] [bmv2] [D] [thread 22221] [35.0] [cxt 0] Extracting header 'ethernet'
+[20:36:44.128] [bmv2] [D] [thread 22221] [35.0] [cxt 0] Extracting header 'ecmp'
+[20:36:44.128] [bmv2] [D] [thread 22221] [35.0] [cxt 0] Extracting header 'ipv4'
+[20:36:44.128] [bmv2] [D] [thread 22221] [35.0] [cxt 0] Extracting header 'tcp'
+[20:36:44.128] [bmv2] [D] [thread 22221] [35.0] [cxt 0] Parser state 'start' has no switch, going to default next state
+[20:36:44.128] [bmv2] [T] [thread 22221] [35.0] [cxt 0] Bytes parsed: 58
+[20:36:44.128] [bmv2] [D] [thread 22221] [35.0] [cxt 0] Parser 'parser': end
+[20:36:44.128] [bmv2] [D] [thread 22221] [35.0] [cxt 0] Pipeline 'ingress': start
+[20:36:44.128] [bmv2] [T] [thread 22221] [35.0] [cxt 0] milestone1.p4(178) Condition "hdr.ipv4.isValid() && hdr.ipv4.ttl > 0" (node_2) is false
+[20:36:44.128] [bmv2] [D] [thread 22221] [35.0] [cxt 0] Pipeline 'ingress': end
+[20:36:44.128] [bmv2] [D] [thread 22221] [35.0] [cxt 0] Egress port is 0
+[20:36:44.128] [bmv2] [D] [thread 22222] [35.0] [cxt 0] Pipeline 'egress': start
+[20:36:44.128] [bmv2] [T] [thread 22222] [35.0] [cxt 0] milestone1.p4(217) Condition "hdr.ecmp.is_load_balance == 1" (node_9) is false
+[20:36:44.128] [bmv2] [D] [thread 22222] [35.0] [cxt 0] Pipeline 'egress': end
+[20:36:44.128] [bmv2] [D] [thread 22222] [35.0] [cxt 0] Deparser 'deparser': start
+[20:36:44.128] [bmv2] [D] [thread 22222] [35.0] [cxt 0] Updating checksum 'cksum'
+[20:36:44.128] [bmv2] [D] [thread 22222] [35.0] [cxt 0] Deparsing header 'ethernet'
+[20:36:44.128] [bmv2] [D] [thread 22222] [35.0] [cxt 0] Deparsing header 'ecmp'
+[20:36:44.128] [bmv2] [D] [thread 22222] [35.0] [cxt 0] Deparsing header 'ipv4'
+[20:36:44.128] [bmv2] [D] [thread 22222] [35.0] [cxt 0] Deparsing header 'tcp'
+[20:36:44.128] [bmv2] [D] [thread 22222] [35.0] [cxt 0] Deparser 'deparser': end
+[20:36:44.128] [bmv2] [D] [thread 22226] [35.0] [cxt 0] Transmitting packet of size 70 out of port 0
+[20:36:50.608] [bmv2] [D] [thread 22221] [36.0] [cxt 0] Processing packet received on port 2
+[20:36:50.608] [bmv2] [D] [thread 22221] [36.0] [cxt 0] Parser 'parser': start
+[20:36:50.608] [bmv2] [D] [thread 22221] [36.0] [cxt 0] Parser 'parser' entering state 'start'
+[20:36:50.608] [bmv2] [D] [thread 22221] [36.0] [cxt 0] Extracting header 'ethernet'
+[20:36:50.608] [bmv2] [D] [thread 22221] [36.0] [cxt 0] Extracting header 'ecmp'
+[20:36:50.608] [bmv2] [D] [thread 22221] [36.0] [cxt 0] Extracting header 'ipv4'
+[20:36:50.608] [bmv2] [D] [thread 22221] [36.0] [cxt 0] Extracting header 'tcp'
+[20:36:50.608] [bmv2] [D] [thread 22221] [36.0] [cxt 0] Parser state 'start' has no switch, going to default next state
+[20:36:50.608] [bmv2] [T] [thread 22221] [36.0] [cxt 0] Bytes parsed: 58
+[20:36:50.608] [bmv2] [D] [thread 22221] [36.0] [cxt 0] Parser 'parser': end
+[20:36:50.608] [bmv2] [D] [thread 22221] [36.0] [cxt 0] Pipeline 'ingress': start
+[20:36:50.608] [bmv2] [T] [thread 22221] [36.0] [cxt 0] milestone1.p4(178) Condition "hdr.ipv4.isValid() && hdr.ipv4.ttl > 0" (node_2) is false
+[20:36:50.608] [bmv2] [D] [thread 22221] [36.0] [cxt 0] Pipeline 'ingress': end
+[20:36:50.608] [bmv2] [D] [thread 22221] [36.0] [cxt 0] Egress port is 0
+[20:36:50.608] [bmv2] [D] [thread 22222] [36.0] [cxt 0] Pipeline 'egress': start
+[20:36:50.609] [bmv2] [T] [thread 22222] [36.0] [cxt 0] milestone1.p4(217) Condition "hdr.ecmp.is_load_balance == 1" (node_9) is false
+[20:36:50.609] [bmv2] [D] [thread 22222] [36.0] [cxt 0] Pipeline 'egress': end
+[20:36:50.609] [bmv2] [D] [thread 22222] [36.0] [cxt 0] Deparser 'deparser': start
+[20:36:50.609] [bmv2] [D] [thread 22222] [36.0] [cxt 0] Updating checksum 'cksum'
+[20:36:50.609] [bmv2] [D] [thread 22222] [36.0] [cxt 0] Deparsing header 'ethernet'
+[20:36:50.609] [bmv2] [D] [thread 22222] [36.0] [cxt 0] Deparsing header 'ecmp'
+[20:36:50.609] [bmv2] [D] [thread 22222] [36.0] [cxt 0] Deparsing header 'ipv4'
+[20:36:50.609] [bmv2] [D] [thread 22222] [36.0] [cxt 0] Deparsing header 'tcp'
+[20:36:50.609] [bmv2] [D] [thread 22222] [36.0] [cxt 0] Deparser 'deparser': end
+[20:36:50.609] [bmv2] [D] [thread 22226] [36.0] [cxt 0] Transmitting packet of size 107 out of port 0
+[20:36:50.740] [bmv2] [D] [thread 22221] [37.0] [cxt 0] Processing packet received on port 1
+[20:36:50.740] [bmv2] [D] [thread 22221] [37.0] [cxt 0] Parser 'parser': start
+[20:36:50.740] [bmv2] [D] [thread 22221] [37.0] [cxt 0] Parser 'parser' entering state 'start'
+[20:36:50.740] [bmv2] [D] [thread 22221] [37.0] [cxt 0] Extracting header 'ethernet'
+[20:36:50.740] [bmv2] [D] [thread 22221] [37.0] [cxt 0] Extracting header 'ecmp'
+[20:36:50.740] [bmv2] [D] [thread 22221] [37.0] [cxt 0] Extracting header 'ipv4'
+[20:36:50.740] [bmv2] [D] [thread 22221] [37.0] [cxt 0] Extracting header 'tcp'
+[20:36:50.740] [bmv2] [D] [thread 22221] [37.0] [cxt 0] Parser state 'start' has no switch, going to default next state
+[20:36:50.740] [bmv2] [T] [thread 22221] [37.0] [cxt 0] Bytes parsed: 58
+[20:36:50.740] [bmv2] [D] [thread 22221] [37.0] [cxt 0] Parser 'parser': end
+[20:36:50.740] [bmv2] [D] [thread 22221] [37.0] [cxt 0] Pipeline 'ingress': start
+[20:36:50.740] [bmv2] [T] [thread 22221] [37.0] [cxt 0] milestone1.p4(178) Condition "hdr.ipv4.isValid() && hdr.ipv4.ttl > 0" (node_2) is false
+[20:36:50.740] [bmv2] [D] [thread 22221] [37.0] [cxt 0] Pipeline 'ingress': end
+[20:36:50.740] [bmv2] [D] [thread 22221] [37.0] [cxt 0] Egress port is 0
+[20:36:50.740] [bmv2] [D] [thread 22222] [37.0] [cxt 0] Pipeline 'egress': start
+[20:36:50.740] [bmv2] [T] [thread 22222] [37.0] [cxt 0] milestone1.p4(217) Condition "hdr.ecmp.is_load_balance == 1" (node_9) is false
+[20:36:50.740] [bmv2] [D] [thread 22222] [37.0] [cxt 0] Pipeline 'egress': end
+[20:36:50.740] [bmv2] [D] [thread 22222] [37.0] [cxt 0] Deparser 'deparser': start
+[20:36:50.740] [bmv2] [D] [thread 22222] [37.0] [cxt 0] Updating checksum 'cksum'
+[20:36:50.740] [bmv2] [D] [thread 22222] [37.0] [cxt 0] Deparsing header 'ethernet'
+[20:36:50.740] [bmv2] [D] [thread 22222] [37.0] [cxt 0] Deparsing header 'ecmp'
+[20:36:50.740] [bmv2] [D] [thread 22222] [37.0] [cxt 0] Deparsing header 'ipv4'
+[20:36:50.740] [bmv2] [D] [thread 22222] [37.0] [cxt 0] Deparsing header 'tcp'
+[20:36:50.740] [bmv2] [D] [thread 22222] [37.0] [cxt 0] Deparser 'deparser': end
+[20:36:50.741] [bmv2] [D] [thread 22226] [37.0] [cxt 0] Transmitting packet of size 107 out of port 0
+[20:36:51.231] [bmv2] [D] [thread 22221] [38.0] [cxt 0] Processing packet received on port 1
+[20:36:51.231] [bmv2] [D] [thread 22221] [38.0] [cxt 0] Parser 'parser': start
+[20:36:51.231] [bmv2] [D] [thread 22221] [38.0] [cxt 0] Parser 'parser' entering state 'start'
+[20:36:51.231] [bmv2] [D] [thread 22221] [38.0] [cxt 0] Extracting header 'ethernet'
+[20:36:51.231] [bmv2] [D] [thread 22221] [38.0] [cxt 0] Extracting header 'ecmp'
+[20:36:51.231] [bmv2] [D] [thread 22221] [38.0] [cxt 0] Extracting header 'ipv4'
+[20:36:51.231] [bmv2] [D] [thread 22221] [38.0] [cxt 0] Extracting header 'tcp'
+[20:36:51.231] [bmv2] [D] [thread 22221] [38.0] [cxt 0] Parser state 'start' has no switch, going to default next state
+[20:36:51.231] [bmv2] [T] [thread 22221] [38.0] [cxt 0] Bytes parsed: 58
+[20:36:51.231] [bmv2] [D] [thread 22221] [38.0] [cxt 0] Parser 'parser': end
+[20:36:51.231] [bmv2] [D] [thread 22221] [38.0] [cxt 0] Pipeline 'ingress': start
+[20:36:51.231] [bmv2] [T] [thread 22221] [38.0] [cxt 0] milestone1.p4(178) Condition "hdr.ipv4.isValid() && hdr.ipv4.ttl > 0" (node_2) is false
+[20:36:51.231] [bmv2] [D] [thread 22221] [38.0] [cxt 0] Pipeline 'ingress': end
+[20:36:51.231] [bmv2] [D] [thread 22221] [38.0] [cxt 0] Egress port is 0
+[20:36:51.231] [bmv2] [D] [thread 22222] [38.0] [cxt 0] Pipeline 'egress': start
+[20:36:51.231] [bmv2] [T] [thread 22222] [38.0] [cxt 0] milestone1.p4(217) Condition "hdr.ecmp.is_load_balance == 1" (node_9) is false
+[20:36:51.231] [bmv2] [D] [thread 22222] [38.0] [cxt 0] Pipeline 'egress': end
+[20:36:51.231] [bmv2] [D] [thread 22222] [38.0] [cxt 0] Deparser 'deparser': start
+[20:36:51.231] [bmv2] [D] [thread 22222] [38.0] [cxt 0] Updating checksum 'cksum'
+[20:36:51.231] [bmv2] [D] [thread 22222] [38.0] [cxt 0] Deparsing header 'ethernet'
+[20:36:51.231] [bmv2] [D] [thread 22222] [38.0] [cxt 0] Deparsing header 'ecmp'
+[20:36:51.231] [bmv2] [D] [thread 22222] [38.0] [cxt 0] Deparsing header 'ipv4'
+[20:36:51.231] [bmv2] [D] [thread 22222] [38.0] [cxt 0] Deparsing header 'tcp'
+[20:36:51.231] [bmv2] [D] [thread 22222] [38.0] [cxt 0] Deparser 'deparser': end
+[20:36:51.231] [bmv2] [D] [thread 22226] [38.0] [cxt 0] Transmitting packet of size 107 out of port 0
+[20:37:06.602] [bmv2] [D] [thread 22221] [39.0] [cxt 0] Processing packet received on port 2
+[20:37:06.602] [bmv2] [D] [thread 22221] [39.0] [cxt 0] Parser 'parser': start
+[20:37:06.602] [bmv2] [D] [thread 22221] [39.0] [cxt 0] Parser 'parser' entering state 'start'
+[20:37:06.602] [bmv2] [D] [thread 22221] [39.0] [cxt 0] Extracting header 'ethernet'
+[20:37:06.603] [bmv2] [D] [thread 22221] [39.0] [cxt 0] Extracting header 'ecmp'
+[20:37:06.603] [bmv2] [D] [thread 22221] [39.0] [cxt 0] Extracting header 'ipv4'
+[20:37:06.603] [bmv2] [D] [thread 22221] [39.0] [cxt 0] Extracting header 'tcp'
+[20:37:06.603] [bmv2] [D] [thread 22221] [39.0] [cxt 0] Parser state 'start' has no switch, going to default next state
+[20:37:06.603] [bmv2] [T] [thread 22221] [39.0] [cxt 0] Bytes parsed: 58
+[20:37:06.603] [bmv2] [D] [thread 22221] [39.0] [cxt 0] Parser 'parser': end
+[20:37:06.603] [bmv2] [D] [thread 22221] [39.0] [cxt 0] Pipeline 'ingress': start
+[20:37:06.603] [bmv2] [T] [thread 22221] [39.0] [cxt 0] milestone1.p4(178) Condition "hdr.ipv4.isValid() && hdr.ipv4.ttl > 0" (node_2) is false
+[20:37:06.603] [bmv2] [D] [thread 22221] [39.0] [cxt 0] Pipeline 'ingress': end
+[20:37:06.603] [bmv2] [D] [thread 22221] [39.0] [cxt 0] Egress port is 0
+[20:37:06.603] [bmv2] [D] [thread 22222] [39.0] [cxt 0] Pipeline 'egress': start
+[20:37:06.603] [bmv2] [T] [thread 22222] [39.0] [cxt 0] milestone1.p4(217) Condition "hdr.ecmp.is_load_balance == 1" (node_9) is false
+[20:37:06.603] [bmv2] [D] [thread 22222] [39.0] [cxt 0] Pipeline 'egress': end
+[20:37:06.603] [bmv2] [D] [thread 22222] [39.0] [cxt 0] Deparser 'deparser': start
+[20:37:06.603] [bmv2] [D] [thread 22222] [39.0] [cxt 0] Updating checksum 'cksum'
+[20:37:06.603] [bmv2] [D] [thread 22222] [39.0] [cxt 0] Deparsing header 'ethernet'
+[20:37:06.603] [bmv2] [D] [thread 22222] [39.0] [cxt 0] Deparsing header 'ecmp'
+[20:37:06.603] [bmv2] [D] [thread 22222] [39.0] [cxt 0] Deparsing header 'ipv4'
+[20:37:06.603] [bmv2] [D] [thread 22222] [39.0] [cxt 0] Deparsing header 'tcp'
+[20:37:06.603] [bmv2] [D] [thread 22222] [39.0] [cxt 0] Deparser 'deparser': end
+[20:37:06.603] [bmv2] [D] [thread 22226] [39.0] [cxt 0] Transmitting packet of size 107 out of port 0
+[20:37:06.742] [bmv2] [D] [thread 22221] [40.0] [cxt 0] Processing packet received on port 1
+[20:37:06.742] [bmv2] [D] [thread 22221] [40.0] [cxt 0] Parser 'parser': start
+[20:37:06.742] [bmv2] [D] [thread 22221] [40.0] [cxt 0] Parser 'parser' entering state 'start'
+[20:37:06.742] [bmv2] [D] [thread 22221] [40.0] [cxt 0] Extracting header 'ethernet'
+[20:37:06.742] [bmv2] [D] [thread 22221] [40.0] [cxt 0] Extracting header 'ecmp'
+[20:37:06.742] [bmv2] [D] [thread 22221] [40.0] [cxt 0] Extracting header 'ipv4'
+[20:37:06.742] [bmv2] [D] [thread 22221] [40.0] [cxt 0] Extracting header 'tcp'
+[20:37:06.742] [bmv2] [D] [thread 22221] [40.0] [cxt 0] Parser state 'start' has no switch, going to default next state
+[20:37:06.742] [bmv2] [T] [thread 22221] [40.0] [cxt 0] Bytes parsed: 58
+[20:37:06.742] [bmv2] [D] [thread 22221] [40.0] [cxt 0] Parser 'parser': end
+[20:37:06.742] [bmv2] [D] [thread 22221] [40.0] [cxt 0] Pipeline 'ingress': start
+[20:37:06.742] [bmv2] [T] [thread 22221] [40.0] [cxt 0] milestone1.p4(178) Condition "hdr.ipv4.isValid() && hdr.ipv4.ttl > 0" (node_2) is false
+[20:37:06.742] [bmv2] [D] [thread 22221] [40.0] [cxt 0] Pipeline 'ingress': end
+[20:37:06.742] [bmv2] [D] [thread 22221] [40.0] [cxt 0] Egress port is 0
+[20:37:06.742] [bmv2] [D] [thread 22222] [40.0] [cxt 0] Pipeline 'egress': start
+[20:37:06.742] [bmv2] [T] [thread 22222] [40.0] [cxt 0] milestone1.p4(217) Condition "hdr.ecmp.is_load_balance == 1" (node_9) is false
+[20:37:06.742] [bmv2] [D] [thread 22222] [40.0] [cxt 0] Pipeline 'egress': end
+[20:37:06.742] [bmv2] [D] [thread 22222] [40.0] [cxt 0] Deparser 'deparser': start
+[20:37:06.742] [bmv2] [D] [thread 22222] [40.0] [cxt 0] Updating checksum 'cksum'
+[20:37:06.742] [bmv2] [D] [thread 22222] [40.0] [cxt 0] Deparsing header 'ethernet'
+[20:37:06.742] [bmv2] [D] [thread 22222] [40.0] [cxt 0] Deparsing header 'ecmp'
+[20:37:06.742] [bmv2] [D] [thread 22222] [40.0] [cxt 0] Deparsing header 'ipv4'
+[20:37:06.742] [bmv2] [D] [thread 22222] [40.0] [cxt 0] Deparsing header 'tcp'
+[20:37:06.742] [bmv2] [D] [thread 22222] [40.0] [cxt 0] Deparser 'deparser': end
+[20:37:06.742] [bmv2] [D] [thread 22226] [40.0] [cxt 0] Transmitting packet of size 107 out of port 0
+[20:37:07.238] [bmv2] [D] [thread 22221] [41.0] [cxt 0] Processing packet received on port 1
+[20:37:07.238] [bmv2] [D] [thread 22221] [41.0] [cxt 0] Parser 'parser': start
+[20:37:07.238] [bmv2] [D] [thread 22221] [41.0] [cxt 0] Parser 'parser' entering state 'start'
+[20:37:07.238] [bmv2] [D] [thread 22221] [41.0] [cxt 0] Extracting header 'ethernet'
+[20:37:07.238] [bmv2] [D] [thread 22221] [41.0] [cxt 0] Extracting header 'ecmp'
+[20:37:07.238] [bmv2] [D] [thread 22221] [41.0] [cxt 0] Extracting header 'ipv4'
+[20:37:07.238] [bmv2] [D] [thread 22221] [41.0] [cxt 0] Extracting header 'tcp'
+[20:37:07.238] [bmv2] [D] [thread 22221] [41.0] [cxt 0] Parser state 'start' has no switch, going to default next state
+[20:37:07.238] [bmv2] [T] [thread 22221] [41.0] [cxt 0] Bytes parsed: 58
+[20:37:07.238] [bmv2] [D] [thread 22221] [41.0] [cxt 0] Parser 'parser': end
+[20:37:07.238] [bmv2] [D] [thread 22221] [41.0] [cxt 0] Pipeline 'ingress': start
+[20:37:07.238] [bmv2] [T] [thread 22221] [41.0] [cxt 0] milestone1.p4(178) Condition "hdr.ipv4.isValid() && hdr.ipv4.ttl > 0" (node_2) is false
+[20:37:07.238] [bmv2] [D] [thread 22221] [41.0] [cxt 0] Pipeline 'ingress': end
+[20:37:07.238] [bmv2] [D] [thread 22221] [41.0] [cxt 0] Egress port is 0
+[20:37:07.238] [bmv2] [D] [thread 22222] [41.0] [cxt 0] Pipeline 'egress': start
+[20:37:07.239] [bmv2] [T] [thread 22222] [41.0] [cxt 0] milestone1.p4(217) Condition "hdr.ecmp.is_load_balance == 1" (node_9) is false
+[20:37:07.239] [bmv2] [D] [thread 22222] [41.0] [cxt 0] Pipeline 'egress': end
+[20:37:07.239] [bmv2] [D] [thread 22222] [41.0] [cxt 0] Deparser 'deparser': start
+[20:37:07.239] [bmv2] [D] [thread 22222] [41.0] [cxt 0] Updating checksum 'cksum'
+[20:37:07.239] [bmv2] [D] [thread 22222] [41.0] [cxt 0] Deparsing header 'ethernet'
+[20:37:07.239] [bmv2] [D] [thread 22222] [41.0] [cxt 0] Deparsing header 'ecmp'
+[20:37:07.239] [bmv2] [D] [thread 22222] [41.0] [cxt 0] Deparsing header 'ipv4'
+[20:37:07.239] [bmv2] [D] [thread 22222] [41.0] [cxt 0] Deparsing header 'tcp'
+[20:37:07.239] [bmv2] [D] [thread 22222] [41.0] [cxt 0] Deparser 'deparser': end
+[20:37:07.239] [bmv2] [D] [thread 22226] [41.0] [cxt 0] Transmitting packet of size 107 out of port 0
+[20:37:12.346] [bmv2] [D] [thread 22221] [42.0] [cxt 0] Processing packet received on port 1
+[20:37:12.346] [bmv2] [D] [thread 22221] [42.0] [cxt 0] Parser 'parser': start
+[20:37:12.346] [bmv2] [D] [thread 22221] [42.0] [cxt 0] Parser 'parser' entering state 'start'
+[20:37:12.346] [bmv2] [D] [thread 22221] [42.0] [cxt 0] Extracting header 'ethernet'
+[20:37:12.346] [bmv2] [D] [thread 22221] [42.0] [cxt 0] Extracting header 'ecmp'
+[20:37:12.346] [bmv2] [D] [thread 22221] [42.0] [cxt 0] Extracting header 'ipv4'
+[20:37:12.346] [bmv2] [D] [thread 22221] [42.0] [cxt 0] Extracting header 'tcp'
+[20:37:12.346] [bmv2] [D] [thread 22221] [42.0] [cxt 0] Parser state 'start' has no switch, going to default next state
+[20:37:12.346] [bmv2] [T] [thread 22221] [42.0] [cxt 0] Bytes parsed: 58
+[20:37:12.346] [bmv2] [D] [thread 22221] [42.0] [cxt 0] Parser 'parser': end
+[20:37:12.346] [bmv2] [D] [thread 22221] [42.0] [cxt 0] Pipeline 'ingress': start
+[20:37:12.346] [bmv2] [T] [thread 22221] [42.0] [cxt 0] milestone1.p4(178) Condition "hdr.ipv4.isValid() && hdr.ipv4.ttl > 0" (node_2) is true
+[20:37:12.346] [bmv2] [T] [thread 22221] [42.0] [cxt 0] milestone1.p4(179) Condition "hdr.ecmp.is_load_balance == 1" (node_3) is false
+[20:37:12.346] [bmv2] [T] [thread 22221] [42.0] [cxt 0] Applying table 'myIngress.ipv4_lpm'
+[20:37:12.346] [bmv2] [D] [thread 22221] [42.0] [cxt 0] Looking up key:
+* hdr.ipv4.dstAddr    : 0a000402
+
+[20:37:12.346] [bmv2] [D] [thread 22221] [42.0] [cxt 0] Table 'myIngress.ipv4_lpm': hit with handle 0
+[20:37:12.346] [bmv2] [D] [thread 22221] [42.0] [cxt 0] Dumping entry 0
+Match key:
+* hdr.ipv4.dstAddr    : LPM       0a000402/32
+Action entry: myIngress.ipv4_forward - 40200,2,
+
+[20:37:12.346] [bmv2] [D] [thread 22221] [42.0] [cxt 0] Action entry is myIngress.ipv4_forward - 40200,2,
+[20:37:12.346] [bmv2] [T] [thread 22221] [42.0] [cxt 0] Action myIngress.ipv4_forward
+[20:37:12.346] [bmv2] [T] [thread 22221] [42.0] [cxt 0] milestone1.p4(157) Primitive standard_metadata.egress_spec = port
+[20:37:12.346] [bmv2] [T] [thread 22221] [42.0] [cxt 0] milestone1.p4(158) Primitive hdr.ethernet.srcAddr = hdr.ethernet.dstAddr
+[20:37:12.346] [bmv2] [T] [thread 22221] [42.0] [cxt 0] milestone1.p4(159) Primitive hdr.ethernet.dstAddr = dstAddr
+[20:37:12.346] [bmv2] [T] [thread 22221] [42.0] [cxt 0] milestone1.p4(160) Primitive hdr.ipv4.ttl = hdr.ipv4.ttl - 1
+[20:37:12.346] [bmv2] [D] [thread 22221] [42.0] [cxt 0] Pipeline 'ingress': end
+[20:37:12.346] [bmv2] [D] [thread 22221] [42.0] [cxt 0] Egress port is 2
+[20:37:12.346] [bmv2] [D] [thread 22224] [42.0] [cxt 0] Pipeline 'egress': start
+[20:37:12.346] [bmv2] [T] [thread 22224] [42.0] [cxt 0] milestone1.p4(217) Condition "hdr.ecmp.is_load_balance == 1" (node_9) is false
+[20:37:12.346] [bmv2] [D] [thread 22224] [42.0] [cxt 0] Pipeline 'egress': end
+[20:37:12.346] [bmv2] [D] [thread 22224] [42.0] [cxt 0] Deparser 'deparser': start
+[20:37:12.346] [bmv2] [D] [thread 22224] [42.0] [cxt 0] Updating checksum 'cksum'
+[20:37:12.346] [bmv2] [D] [thread 22224] [42.0] [cxt 0] Deparsing header 'ethernet'
+[20:37:12.346] [bmv2] [D] [thread 22224] [42.0] [cxt 0] Deparsing header 'ecmp'
+[20:37:12.346] [bmv2] [D] [thread 22224] [42.0] [cxt 0] Deparsing header 'ipv4'
+[20:37:12.346] [bmv2] [D] [thread 22224] [42.0] [cxt 0] Deparsing header 'tcp'
+[20:37:12.346] [bmv2] [D] [thread 22224] [42.0] [cxt 0] Deparser 'deparser': end
+[20:37:12.346] [bmv2] [D] [thread 22226] [42.0] [cxt 0] Transmitting packet of size 63 out of port 2
+[20:37:38.602] [bmv2] [D] [thread 22221] [43.0] [cxt 0] Processing packet received on port 2
+[20:37:38.602] [bmv2] [D] [thread 22221] [43.0] [cxt 0] Parser 'parser': start
+[20:37:38.602] [bmv2] [D] [thread 22221] [43.0] [cxt 0] Parser 'parser' entering state 'start'
+[20:37:38.602] [bmv2] [D] [thread 22221] [43.0] [cxt 0] Extracting header 'ethernet'
+[20:37:38.602] [bmv2] [D] [thread 22221] [43.0] [cxt 0] Extracting header 'ecmp'
+[20:37:38.602] [bmv2] [D] [thread 22221] [43.0] [cxt 0] Extracting header 'ipv4'
+[20:37:38.602] [bmv2] [D] [thread 22221] [43.0] [cxt 0] Extracting header 'tcp'
+[20:37:38.602] [bmv2] [D] [thread 22221] [43.0] [cxt 0] Parser state 'start' has no switch, going to default next state
+[20:37:38.602] [bmv2] [T] [thread 22221] [43.0] [cxt 0] Bytes parsed: 58
+[20:37:38.602] [bmv2] [D] [thread 22221] [43.0] [cxt 0] Parser 'parser': end
+[20:37:38.602] [bmv2] [D] [thread 22221] [43.0] [cxt 0] Pipeline 'ingress': start
+[20:37:38.602] [bmv2] [T] [thread 22221] [43.0] [cxt 0] milestone1.p4(178) Condition "hdr.ipv4.isValid() && hdr.ipv4.ttl > 0" (node_2) is false
+[20:37:38.602] [bmv2] [D] [thread 22221] [43.0] [cxt 0] Pipeline 'ingress': end
+[20:37:38.602] [bmv2] [D] [thread 22221] [43.0] [cxt 0] Egress port is 0
+[20:37:38.603] [bmv2] [D] [thread 22222] [43.0] [cxt 0] Pipeline 'egress': start
+[20:37:38.603] [bmv2] [T] [thread 22222] [43.0] [cxt 0] milestone1.p4(217) Condition "hdr.ecmp.is_load_balance == 1" (node_9) is false
+[20:37:38.603] [bmv2] [D] [thread 22222] [43.0] [cxt 0] Pipeline 'egress': end
+[20:37:38.603] [bmv2] [D] [thread 22222] [43.0] [cxt 0] Deparser 'deparser': start
+[20:37:38.603] [bmv2] [D] [thread 22222] [43.0] [cxt 0] Updating checksum 'cksum'
+[20:37:38.603] [bmv2] [D] [thread 22222] [43.0] [cxt 0] Deparsing header 'ethernet'
+[20:37:38.603] [bmv2] [D] [thread 22222] [43.0] [cxt 0] Deparsing header 'ecmp'
+[20:37:38.603] [bmv2] [D] [thread 22222] [43.0] [cxt 0] Deparsing header 'ipv4'
+[20:37:38.603] [bmv2] [D] [thread 22222] [43.0] [cxt 0] Deparsing header 'tcp'
+[20:37:38.603] [bmv2] [D] [thread 22222] [43.0] [cxt 0] Deparser 'deparser': end
+[20:37:38.603] [bmv2] [D] [thread 22226] [43.0] [cxt 0] Transmitting packet of size 107 out of port 0
+[20:37:38.750] [bmv2] [D] [thread 22221] [44.0] [cxt 0] Processing packet received on port 1
+[20:37:38.750] [bmv2] [D] [thread 22221] [44.0] [cxt 0] Parser 'parser': start
+[20:37:38.750] [bmv2] [D] [thread 22221] [44.0] [cxt 0] Parser 'parser' entering state 'start'
+[20:37:38.750] [bmv2] [D] [thread 22221] [44.0] [cxt 0] Extracting header 'ethernet'
+[20:37:38.750] [bmv2] [D] [thread 22221] [44.0] [cxt 0] Extracting header 'ecmp'
+[20:37:38.750] [bmv2] [D] [thread 22221] [44.0] [cxt 0] Extracting header 'ipv4'
+[20:37:38.750] [bmv2] [D] [thread 22221] [44.0] [cxt 0] Extracting header 'tcp'
+[20:37:38.750] [bmv2] [D] [thread 22221] [44.0] [cxt 0] Parser state 'start' has no switch, going to default next state
+[20:37:38.750] [bmv2] [T] [thread 22221] [44.0] [cxt 0] Bytes parsed: 58
+[20:37:38.750] [bmv2] [D] [thread 22221] [44.0] [cxt 0] Parser 'parser': end
+[20:37:38.750] [bmv2] [D] [thread 22221] [44.0] [cxt 0] Pipeline 'ingress': start
+[20:37:38.750] [bmv2] [T] [thread 22221] [44.0] [cxt 0] milestone1.p4(178) Condition "hdr.ipv4.isValid() && hdr.ipv4.ttl > 0" (node_2) is false
+[20:37:38.750] [bmv2] [D] [thread 22221] [44.0] [cxt 0] Pipeline 'ingress': end
+[20:37:38.750] [bmv2] [D] [thread 22221] [44.0] [cxt 0] Egress port is 0
+[20:37:38.750] [bmv2] [D] [thread 22222] [44.0] [cxt 0] Pipeline 'egress': start
+[20:37:38.750] [bmv2] [T] [thread 22222] [44.0] [cxt 0] milestone1.p4(217) Condition "hdr.ecmp.is_load_balance == 1" (node_9) is false
+[20:37:38.750] [bmv2] [D] [thread 22222] [44.0] [cxt 0] Pipeline 'egress': end
+[20:37:38.750] [bmv2] [D] [thread 22222] [44.0] [cxt 0] Deparser 'deparser': start
+[20:37:38.750] [bmv2] [D] [thread 22222] [44.0] [cxt 0] Updating checksum 'cksum'
+[20:37:38.750] [bmv2] [D] [thread 22222] [44.0] [cxt 0] Deparsing header 'ethernet'
+[20:37:38.750] [bmv2] [D] [thread 22222] [44.0] [cxt 0] Deparsing header 'ecmp'
+[20:37:38.750] [bmv2] [D] [thread 22222] [44.0] [cxt 0] Deparsing header 'ipv4'
+[20:37:38.750] [bmv2] [D] [thread 22222] [44.0] [cxt 0] Deparsing header 'tcp'
+[20:37:38.750] [bmv2] [D] [thread 22222] [44.0] [cxt 0] Deparser 'deparser': end
+[20:37:38.750] [bmv2] [D] [thread 22226] [44.0] [cxt 0] Transmitting packet of size 107 out of port 0
+[20:37:39.252] [bmv2] [D] [thread 22221] [45.0] [cxt 0] Processing packet received on port 1
+[20:37:39.252] [bmv2] [D] [thread 22221] [45.0] [cxt 0] Parser 'parser': start
+[20:37:39.252] [bmv2] [D] [thread 22221] [45.0] [cxt 0] Parser 'parser' entering state 'start'
+[20:37:39.252] [bmv2] [D] [thread 22221] [45.0] [cxt 0] Extracting header 'ethernet'
+[20:37:39.252] [bmv2] [D] [thread 22221] [45.0] [cxt 0] Extracting header 'ecmp'
+[20:37:39.252] [bmv2] [D] [thread 22221] [45.0] [cxt 0] Extracting header 'ipv4'
+[20:37:39.252] [bmv2] [D] [thread 22221] [45.0] [cxt 0] Extracting header 'tcp'
+[20:37:39.252] [bmv2] [D] [thread 22221] [45.0] [cxt 0] Parser state 'start' has no switch, going to default next state
+[20:37:39.252] [bmv2] [T] [thread 22221] [45.0] [cxt 0] Bytes parsed: 58
+[20:37:39.252] [bmv2] [D] [thread 22221] [45.0] [cxt 0] Parser 'parser': end
+[20:37:39.252] [bmv2] [D] [thread 22221] [45.0] [cxt 0] Pipeline 'ingress': start
+[20:37:39.252] [bmv2] [T] [thread 22221] [45.0] [cxt 0] milestone1.p4(178) Condition "hdr.ipv4.isValid() && hdr.ipv4.ttl > 0" (node_2) is false
+[20:37:39.252] [bmv2] [D] [thread 22221] [45.0] [cxt 0] Pipeline 'ingress': end
+[20:37:39.252] [bmv2] [D] [thread 22221] [45.0] [cxt 0] Egress port is 0
+[20:37:39.252] [bmv2] [D] [thread 22222] [45.0] [cxt 0] Pipeline 'egress': start
+[20:37:39.252] [bmv2] [T] [thread 22222] [45.0] [cxt 0] milestone1.p4(217) Condition "hdr.ecmp.is_load_balance == 1" (node_9) is false
+[20:37:39.252] [bmv2] [D] [thread 22222] [45.0] [cxt 0] Pipeline 'egress': end
+[20:37:39.252] [bmv2] [D] [thread 22222] [45.0] [cxt 0] Deparser 'deparser': start
+[20:37:39.252] [bmv2] [D] [thread 22222] [45.0] [cxt 0] Updating checksum 'cksum'
+[20:37:39.252] [bmv2] [D] [thread 22222] [45.0] [cxt 0] Deparsing header 'ethernet'
+[20:37:39.252] [bmv2] [D] [thread 22222] [45.0] [cxt 0] Deparsing header 'ecmp'
+[20:37:39.252] [bmv2] [D] [thread 22222] [45.0] [cxt 0] Deparsing header 'ipv4'
+[20:37:39.252] [bmv2] [D] [thread 22222] [45.0] [cxt 0] Deparsing header 'tcp'
+[20:37:39.252] [bmv2] [D] [thread 22222] [45.0] [cxt 0] Deparser 'deparser': end
+[20:37:39.252] [bmv2] [D] [thread 22226] [45.0] [cxt 0] Transmitting packet of size 107 out of port 0
+[20:38:42.608] [bmv2] [D] [thread 22221] [46.0] [cxt 0] Processing packet received on port 2
+[20:38:42.609] [bmv2] [D] [thread 22221] [46.0] [cxt 0] Parser 'parser': start
+[20:38:42.609] [bmv2] [D] [thread 22221] [46.0] [cxt 0] Parser 'parser' entering state 'start'
+[20:38:42.609] [bmv2] [D] [thread 22221] [46.0] [cxt 0] Extracting header 'ethernet'
+[20:38:42.609] [bmv2] [D] [thread 22221] [46.0] [cxt 0] Extracting header 'ecmp'
+[20:38:42.609] [bmv2] [D] [thread 22221] [46.0] [cxt 0] Extracting header 'ipv4'
+[20:38:42.609] [bmv2] [D] [thread 22221] [46.0] [cxt 0] Extracting header 'tcp'
+[20:38:42.609] [bmv2] [D] [thread 22221] [46.0] [cxt 0] Parser state 'start' has no switch, going to default next state
+[20:38:42.609] [bmv2] [T] [thread 22221] [46.0] [cxt 0] Bytes parsed: 58
+[20:38:42.609] [bmv2] [D] [thread 22221] [46.0] [cxt 0] Parser 'parser': end
+[20:38:42.609] [bmv2] [D] [thread 22221] [46.0] [cxt 0] Pipeline 'ingress': start
+[20:38:42.609] [bmv2] [T] [thread 22221] [46.0] [cxt 0] milestone1.p4(178) Condition "hdr.ipv4.isValid() && hdr.ipv4.ttl > 0" (node_2) is false
+[20:38:42.609] [bmv2] [D] [thread 22221] [46.0] [cxt 0] Pipeline 'ingress': end
+[20:38:42.609] [bmv2] [D] [thread 22221] [46.0] [cxt 0] Egress port is 0
+[20:38:42.609] [bmv2] [D] [thread 22222] [46.0] [cxt 0] Pipeline 'egress': start
+[20:38:42.609] [bmv2] [T] [thread 22222] [46.0] [cxt 0] milestone1.p4(217) Condition "hdr.ecmp.is_load_balance == 1" (node_9) is false
+[20:38:42.609] [bmv2] [D] [thread 22222] [46.0] [cxt 0] Pipeline 'egress': end
+[20:38:42.609] [bmv2] [D] [thread 22222] [46.0] [cxt 0] Deparser 'deparser': start
+[20:38:42.609] [bmv2] [D] [thread 22222] [46.0] [cxt 0] Updating checksum 'cksum'
+[20:38:42.609] [bmv2] [D] [thread 22222] [46.0] [cxt 0] Deparsing header 'ethernet'
+[20:38:42.609] [bmv2] [D] [thread 22222] [46.0] [cxt 0] Deparsing header 'ecmp'
+[20:38:42.609] [bmv2] [D] [thread 22222] [46.0] [cxt 0] Deparsing header 'ipv4'
+[20:38:42.609] [bmv2] [D] [thread 22222] [46.0] [cxt 0] Deparsing header 'tcp'
+[20:38:42.609] [bmv2] [D] [thread 22222] [46.0] [cxt 0] Deparser 'deparser': end
+[20:38:42.609] [bmv2] [D] [thread 22226] [46.0] [cxt 0] Transmitting packet of size 107 out of port 0
+[20:38:42.744] [bmv2] [D] [thread 22221] [47.0] [cxt 0] Processing packet received on port 1
+[20:38:42.744] [bmv2] [D] [thread 22221] [47.0] [cxt 0] Parser 'parser': start
+[20:38:42.744] [bmv2] [D] [thread 22221] [47.0] [cxt 0] Parser 'parser' entering state 'start'
+[20:38:42.744] [bmv2] [D] [thread 22221] [47.0] [cxt 0] Extracting header 'ethernet'
+[20:38:42.744] [bmv2] [D] [thread 22221] [47.0] [cxt 0] Extracting header 'ecmp'
+[20:38:42.744] [bmv2] [D] [thread 22221] [47.0] [cxt 0] Extracting header 'ipv4'
+[20:38:42.744] [bmv2] [D] [thread 22221] [47.0] [cxt 0] Extracting header 'tcp'
+[20:38:42.744] [bmv2] [D] [thread 22221] [47.0] [cxt 0] Parser state 'start' has no switch, going to default next state
+[20:38:42.744] [bmv2] [T] [thread 22221] [47.0] [cxt 0] Bytes parsed: 58
+[20:38:42.744] [bmv2] [D] [thread 22221] [47.0] [cxt 0] Parser 'parser': end
+[20:38:42.744] [bmv2] [D] [thread 22221] [47.0] [cxt 0] Pipeline 'ingress': start
+[20:38:42.744] [bmv2] [T] [thread 22221] [47.0] [cxt 0] milestone1.p4(178) Condition "hdr.ipv4.isValid() && hdr.ipv4.ttl > 0" (node_2) is false
+[20:38:42.744] [bmv2] [D] [thread 22221] [47.0] [cxt 0] Pipeline 'ingress': end
+[20:38:42.744] [bmv2] [D] [thread 22221] [47.0] [cxt 0] Egress port is 0
+[20:38:42.744] [bmv2] [D] [thread 22222] [47.0] [cxt 0] Pipeline 'egress': start
+[20:38:42.744] [bmv2] [T] [thread 22222] [47.0] [cxt 0] milestone1.p4(217) Condition "hdr.ecmp.is_load_balance == 1" (node_9) is false
+[20:38:42.744] [bmv2] [D] [thread 22222] [47.0] [cxt 0] Pipeline 'egress': end
+[20:38:42.744] [bmv2] [D] [thread 22222] [47.0] [cxt 0] Deparser 'deparser': start
+[20:38:42.744] [bmv2] [D] [thread 22222] [47.0] [cxt 0] Updating checksum 'cksum'
+[20:38:42.744] [bmv2] [D] [thread 22222] [47.0] [cxt 0] Deparsing header 'ethernet'
+[20:38:42.744] [bmv2] [D] [thread 22222] [47.0] [cxt 0] Deparsing header 'ecmp'
+[20:38:42.744] [bmv2] [D] [thread 22222] [47.0] [cxt 0] Deparsing header 'ipv4'
+[20:38:42.744] [bmv2] [D] [thread 22222] [47.0] [cxt 0] Deparsing header 'tcp'
+[20:38:42.744] [bmv2] [D] [thread 22222] [47.0] [cxt 0] Deparser 'deparser': end
+[20:38:42.745] [bmv2] [D] [thread 22226] [47.0] [cxt 0] Transmitting packet of size 107 out of port 0
+[20:38:43.248] [bmv2] [D] [thread 22221] [48.0] [cxt 0] Processing packet received on port 1
+[20:38:43.248] [bmv2] [D] [thread 22221] [48.0] [cxt 0] Parser 'parser': start
+[20:38:43.248] [bmv2] [D] [thread 22221] [48.0] [cxt 0] Parser 'parser' entering state 'start'
+[20:38:43.248] [bmv2] [D] [thread 22221] [48.0] [cxt 0] Extracting header 'ethernet'
+[20:38:43.248] [bmv2] [D] [thread 22221] [48.0] [cxt 0] Extracting header 'ecmp'
+[20:38:43.248] [bmv2] [D] [thread 22221] [48.0] [cxt 0] Extracting header 'ipv4'
+[20:38:43.248] [bmv2] [D] [thread 22221] [48.0] [cxt 0] Extracting header 'tcp'
+[20:38:43.248] [bmv2] [D] [thread 22221] [48.0] [cxt 0] Parser state 'start' has no switch, going to default next state
+[20:38:43.248] [bmv2] [T] [thread 22221] [48.0] [cxt 0] Bytes parsed: 58
+[20:38:43.248] [bmv2] [D] [thread 22221] [48.0] [cxt 0] Parser 'parser': end
+[20:38:43.248] [bmv2] [D] [thread 22221] [48.0] [cxt 0] Pipeline 'ingress': start
+[20:38:43.249] [bmv2] [T] [thread 22221] [48.0] [cxt 0] milestone1.p4(178) Condition "hdr.ipv4.isValid() && hdr.ipv4.ttl > 0" (node_2) is false
+[20:38:43.249] [bmv2] [D] [thread 22221] [48.0] [cxt 0] Pipeline 'ingress': end
+[20:38:43.249] [bmv2] [D] [thread 22221] [48.0] [cxt 0] Egress port is 0
+[20:38:43.249] [bmv2] [D] [thread 22222] [48.0] [cxt 0] Pipeline 'egress': start
+[20:38:43.249] [bmv2] [T] [thread 22222] [48.0] [cxt 0] milestone1.p4(217) Condition "hdr.ecmp.is_load_balance == 1" (node_9) is false
+[20:38:43.249] [bmv2] [D] [thread 22222] [48.0] [cxt 0] Pipeline 'egress': end
+[20:38:43.249] [bmv2] [D] [thread 22222] [48.0] [cxt 0] Deparser 'deparser': start
+[20:38:43.249] [bmv2] [D] [thread 22222] [48.0] [cxt 0] Updating checksum 'cksum'
+[20:38:43.249] [bmv2] [D] [thread 22222] [48.0] [cxt 0] Deparsing header 'ethernet'
+[20:38:43.249] [bmv2] [D] [thread 22222] [48.0] [cxt 0] Deparsing header 'ecmp'
+[20:38:43.249] [bmv2] [D] [thread 22222] [48.0] [cxt 0] Deparsing header 'ipv4'
+[20:38:43.249] [bmv2] [D] [thread 22222] [48.0] [cxt 0] Deparsing header 'tcp'
+[20:38:43.249] [bmv2] [D] [thread 22222] [48.0] [cxt 0] Deparser 'deparser': end
+[20:38:43.249] [bmv2] [D] [thread 22226] [48.0] [cxt 0] Transmitting packet of size 107 out of port 0
+[20:40:50.608] [bmv2] [D] [thread 22221] [49.0] [cxt 0] Processing packet received on port 2
+[20:40:50.608] [bmv2] [D] [thread 22221] [49.0] [cxt 0] Parser 'parser': start
+[20:40:50.608] [bmv2] [D] [thread 22221] [49.0] [cxt 0] Parser 'parser' entering state 'start'
+[20:40:50.608] [bmv2] [D] [thread 22221] [49.0] [cxt 0] Extracting header 'ethernet'
+[20:40:50.608] [bmv2] [D] [thread 22221] [49.0] [cxt 0] Extracting header 'ecmp'
+[20:40:50.608] [bmv2] [D] [thread 22221] [49.0] [cxt 0] Extracting header 'ipv4'
+[20:40:50.608] [bmv2] [D] [thread 22221] [49.0] [cxt 0] Extracting header 'tcp'
+[20:40:50.608] [bmv2] [D] [thread 22221] [49.0] [cxt 0] Parser state 'start' has no switch, going to default next state
+[20:40:50.608] [bmv2] [T] [thread 22221] [49.0] [cxt 0] Bytes parsed: 58
+[20:40:50.608] [bmv2] [D] [thread 22221] [49.0] [cxt 0] Parser 'parser': end
+[20:40:50.608] [bmv2] [D] [thread 22221] [49.0] [cxt 0] Pipeline 'ingress': start
+[20:40:50.608] [bmv2] [T] [thread 22221] [49.0] [cxt 0] milestone1.p4(178) Condition "hdr.ipv4.isValid() && hdr.ipv4.ttl > 0" (node_2) is false
+[20:40:50.608] [bmv2] [D] [thread 22221] [49.0] [cxt 0] Pipeline 'ingress': end
+[20:40:50.608] [bmv2] [D] [thread 22221] [49.0] [cxt 0] Egress port is 0
+[20:40:50.608] [bmv2] [D] [thread 22222] [49.0] [cxt 0] Pipeline 'egress': start
+[20:40:50.608] [bmv2] [T] [thread 22222] [49.0] [cxt 0] milestone1.p4(217) Condition "hdr.ecmp.is_load_balance == 1" (node_9) is false
+[20:40:50.608] [bmv2] [D] [thread 22222] [49.0] [cxt 0] Pipeline 'egress': end
+[20:40:50.608] [bmv2] [D] [thread 22222] [49.0] [cxt 0] Deparser 'deparser': start
+[20:40:50.608] [bmv2] [D] [thread 22222] [49.0] [cxt 0] Updating checksum 'cksum'
+[20:40:50.608] [bmv2] [D] [thread 22222] [49.0] [cxt 0] Deparsing header 'ethernet'
+[20:40:50.608] [bmv2] [D] [thread 22222] [49.0] [cxt 0] Deparsing header 'ecmp'
+[20:40:50.608] [bmv2] [D] [thread 22222] [49.0] [cxt 0] Deparsing header 'ipv4'
+[20:40:50.608] [bmv2] [D] [thread 22222] [49.0] [cxt 0] Deparsing header 'tcp'
+[20:40:50.608] [bmv2] [D] [thread 22222] [49.0] [cxt 0] Deparser 'deparser': end
+[20:40:50.608] [bmv2] [D] [thread 22226] [49.0] [cxt 0] Transmitting packet of size 107 out of port 0
+[20:40:50.747] [bmv2] [D] [thread 22221] [50.0] [cxt 0] Processing packet received on port 1
+[20:40:50.747] [bmv2] [D] [thread 22221] [50.0] [cxt 0] Parser 'parser': start
+[20:40:50.747] [bmv2] [D] [thread 22221] [50.0] [cxt 0] Parser 'parser' entering state 'start'
+[20:40:50.747] [bmv2] [D] [thread 22221] [50.0] [cxt 0] Extracting header 'ethernet'
+[20:40:50.747] [bmv2] [D] [thread 22221] [50.0] [cxt 0] Extracting header 'ecmp'
+[20:40:50.747] [bmv2] [D] [thread 22221] [50.0] [cxt 0] Extracting header 'ipv4'
+[20:40:50.747] [bmv2] [D] [thread 22221] [50.0] [cxt 0] Extracting header 'tcp'
+[20:40:50.747] [bmv2] [D] [thread 22221] [50.0] [cxt 0] Parser state 'start' has no switch, going to default next state
+[20:40:50.747] [bmv2] [T] [thread 22221] [50.0] [cxt 0] Bytes parsed: 58
+[20:40:50.747] [bmv2] [D] [thread 22221] [50.0] [cxt 0] Parser 'parser': end
+[20:40:50.747] [bmv2] [D] [thread 22221] [50.0] [cxt 0] Pipeline 'ingress': start
+[20:40:50.747] [bmv2] [T] [thread 22221] [50.0] [cxt 0] milestone1.p4(178) Condition "hdr.ipv4.isValid() && hdr.ipv4.ttl > 0" (node_2) is false
+[20:40:50.747] [bmv2] [D] [thread 22221] [50.0] [cxt 0] Pipeline 'ingress': end
+[20:40:50.747] [bmv2] [D] [thread 22221] [50.0] [cxt 0] Egress port is 0
+[20:40:50.747] [bmv2] [D] [thread 22222] [50.0] [cxt 0] Pipeline 'egress': start
+[20:40:50.747] [bmv2] [T] [thread 22222] [50.0] [cxt 0] milestone1.p4(217) Condition "hdr.ecmp.is_load_balance == 1" (node_9) is false
+[20:40:50.747] [bmv2] [D] [thread 22222] [50.0] [cxt 0] Pipeline 'egress': end
+[20:40:50.747] [bmv2] [D] [thread 22222] [50.0] [cxt 0] Deparser 'deparser': start
+[20:40:50.747] [bmv2] [D] [thread 22222] [50.0] [cxt 0] Updating checksum 'cksum'
+[20:40:50.747] [bmv2] [D] [thread 22222] [50.0] [cxt 0] Deparsing header 'ethernet'
+[20:40:50.747] [bmv2] [D] [thread 22222] [50.0] [cxt 0] Deparsing header 'ecmp'
+[20:40:50.747] [bmv2] [D] [thread 22222] [50.0] [cxt 0] Deparsing header 'ipv4'
+[20:40:50.747] [bmv2] [D] [thread 22222] [50.0] [cxt 0] Deparsing header 'tcp'
+[20:40:50.747] [bmv2] [D] [thread 22222] [50.0] [cxt 0] Deparser 'deparser': end
+[20:40:50.747] [bmv2] [D] [thread 22226] [50.0] [cxt 0] Transmitting packet of size 107 out of port 0
+[20:40:51.245] [bmv2] [D] [thread 22221] [51.0] [cxt 0] Processing packet received on port 1
+[20:40:51.245] [bmv2] [D] [thread 22221] [51.0] [cxt 0] Parser 'parser': start
+[20:40:51.245] [bmv2] [D] [thread 22221] [51.0] [cxt 0] Parser 'parser' entering state 'start'
+[20:40:51.245] [bmv2] [D] [thread 22221] [51.0] [cxt 0] Extracting header 'ethernet'
+[20:40:51.245] [bmv2] [D] [thread 22221] [51.0] [cxt 0] Extracting header 'ecmp'
+[20:40:51.245] [bmv2] [D] [thread 22221] [51.0] [cxt 0] Extracting header 'ipv4'
+[20:40:51.245] [bmv2] [D] [thread 22221] [51.0] [cxt 0] Extracting header 'tcp'
+[20:40:51.245] [bmv2] [D] [thread 22221] [51.0] [cxt 0] Parser state 'start' has no switch, going to default next state
+[20:40:51.245] [bmv2] [T] [thread 22221] [51.0] [cxt 0] Bytes parsed: 58
+[20:40:51.245] [bmv2] [D] [thread 22221] [51.0] [cxt 0] Parser 'parser': end
+[20:40:51.245] [bmv2] [D] [thread 22221] [51.0] [cxt 0] Pipeline 'ingress': start
+[20:40:51.245] [bmv2] [T] [thread 22221] [51.0] [cxt 0] milestone1.p4(178) Condition "hdr.ipv4.isValid() && hdr.ipv4.ttl > 0" (node_2) is false
+[20:40:51.245] [bmv2] [D] [thread 22221] [51.0] [cxt 0] Pipeline 'ingress': end
+[20:40:51.246] [bmv2] [D] [thread 22221] [51.0] [cxt 0] Egress port is 0
+[20:40:51.246] [bmv2] [D] [thread 22222] [51.0] [cxt 0] Pipeline 'egress': start
+[20:40:51.246] [bmv2] [T] [thread 22222] [51.0] [cxt 0] milestone1.p4(217) Condition "hdr.ecmp.is_load_balance == 1" (node_9) is false
+[20:40:51.246] [bmv2] [D] [thread 22222] [51.0] [cxt 0] Pipeline 'egress': end
+[20:40:51.246] [bmv2] [D] [thread 22222] [51.0] [cxt 0] Deparser 'deparser': start
+[20:40:51.246] [bmv2] [D] [thread 22222] [51.0] [cxt 0] Updating checksum 'cksum'
+[20:40:51.246] [bmv2] [D] [thread 22222] [51.0] [cxt 0] Deparsing header 'ethernet'
+[20:40:51.246] [bmv2] [D] [thread 22222] [51.0] [cxt 0] Deparsing header 'ecmp'
+[20:40:51.246] [bmv2] [D] [thread 22222] [51.0] [cxt 0] Deparsing header 'ipv4'
+[20:40:51.246] [bmv2] [D] [thread 22222] [51.0] [cxt 0] Deparsing header 'tcp'
+[20:40:51.246] [bmv2] [D] [thread 22222] [51.0] [cxt 0] Deparser 'deparser': end
+[20:40:51.246] [bmv2] [D] [thread 22226] [51.0] [cxt 0] Transmitting packet of size 107 out of port 0
+[20:41:42.197] [bmv2] [D] [thread 22221] [52.0] [cxt 0] Processing packet received on port 1
+[20:41:42.197] [bmv2] [D] [thread 22221] [52.0] [cxt 0] Parser 'parser': start
+[20:41:42.197] [bmv2] [D] [thread 22221] [52.0] [cxt 0] Parser 'parser' entering state 'start'
+[20:41:42.197] [bmv2] [D] [thread 22221] [52.0] [cxt 0] Extracting header 'ethernet'
+[20:41:42.197] [bmv2] [D] [thread 22221] [52.0] [cxt 0] Extracting header 'ecmp'
+[20:41:42.197] [bmv2] [D] [thread 22221] [52.0] [cxt 0] Extracting header 'ipv4'
+[20:41:42.197] [bmv2] [D] [thread 22221] [52.0] [cxt 0] Extracting header 'tcp'
+[20:41:42.197] [bmv2] [D] [thread 22221] [52.0] [cxt 0] Parser state 'start' has no switch, going to default next state
+[20:41:42.197] [bmv2] [T] [thread 22221] [52.0] [cxt 0] Bytes parsed: 58
+[20:41:42.197] [bmv2] [D] [thread 22221] [52.0] [cxt 0] Parser 'parser': end
+[20:41:42.197] [bmv2] [D] [thread 22221] [52.0] [cxt 0] Pipeline 'ingress': start
+[20:41:42.197] [bmv2] [T] [thread 22221] [52.0] [cxt 0] milestone1.p4(178) Condition "hdr.ipv4.isValid() && hdr.ipv4.ttl > 0" (node_2) is true
+[20:41:42.197] [bmv2] [T] [thread 22221] [52.0] [cxt 0] milestone1.p4(179) Condition "hdr.ecmp.is_load_balance == 1" (node_3) is false
+[20:41:42.197] [bmv2] [T] [thread 22221] [52.0] [cxt 0] Applying table 'myIngress.ipv4_lpm'
+[20:41:42.197] [bmv2] [D] [thread 22221] [52.0] [cxt 0] Looking up key:
+* hdr.ipv4.dstAddr    : 0a000402
+
+[20:41:42.197] [bmv2] [D] [thread 22221] [52.0] [cxt 0] Table 'myIngress.ipv4_lpm': hit with handle 0
+[20:41:42.197] [bmv2] [D] [thread 22221] [52.0] [cxt 0] Dumping entry 0
+Match key:
+* hdr.ipv4.dstAddr    : LPM       0a000402/32
+Action entry: myIngress.ipv4_forward - 40200,2,
+
+[20:41:42.197] [bmv2] [D] [thread 22221] [52.0] [cxt 0] Action entry is myIngress.ipv4_forward - 40200,2,
+[20:41:42.197] [bmv2] [T] [thread 22221] [52.0] [cxt 0] Action myIngress.ipv4_forward
+[20:41:42.197] [bmv2] [T] [thread 22221] [52.0] [cxt 0] milestone1.p4(157) Primitive standard_metadata.egress_spec = port
+[20:41:42.197] [bmv2] [T] [thread 22221] [52.0] [cxt 0] milestone1.p4(158) Primitive hdr.ethernet.srcAddr = hdr.ethernet.dstAddr
+[20:41:42.197] [bmv2] [T] [thread 22221] [52.0] [cxt 0] milestone1.p4(159) Primitive hdr.ethernet.dstAddr = dstAddr
+[20:41:42.197] [bmv2] [T] [thread 22221] [52.0] [cxt 0] milestone1.p4(160) Primitive hdr.ipv4.ttl = hdr.ipv4.ttl - 1
+[20:41:42.197] [bmv2] [D] [thread 22221] [52.0] [cxt 0] Pipeline 'ingress': end
+[20:41:42.197] [bmv2] [D] [thread 22221] [52.0] [cxt 0] Egress port is 2
+[20:41:42.198] [bmv2] [D] [thread 22224] [52.0] [cxt 0] Pipeline 'egress': start
+[20:41:42.198] [bmv2] [T] [thread 22224] [52.0] [cxt 0] milestone1.p4(217) Condition "hdr.ecmp.is_load_balance == 1" (node_9) is false
+[20:41:42.198] [bmv2] [D] [thread 22224] [52.0] [cxt 0] Pipeline 'egress': end
+[20:41:42.198] [bmv2] [D] [thread 22224] [52.0] [cxt 0] Deparser 'deparser': start
+[20:41:42.198] [bmv2] [D] [thread 22224] [52.0] [cxt 0] Updating checksum 'cksum'
+[20:41:42.198] [bmv2] [D] [thread 22224] [52.0] [cxt 0] Deparsing header 'ethernet'
+[20:41:42.198] [bmv2] [D] [thread 22224] [52.0] [cxt 0] Deparsing header 'ecmp'
+[20:41:42.198] [bmv2] [D] [thread 22224] [52.0] [cxt 0] Deparsing header 'ipv4'
+[20:41:42.198] [bmv2] [D] [thread 22224] [52.0] [cxt 0] Deparsing header 'tcp'
+[20:41:42.198] [bmv2] [D] [thread 22224] [52.0] [cxt 0] Deparser 'deparser': end
+[20:41:42.198] [bmv2] [D] [thread 22226] [52.0] [cxt 0] Transmitting packet of size 63 out of port 2
+[20:45:06.612] [bmv2] [D] [thread 22221] [53.0] [cxt 0] Processing packet received on port 2
+[20:45:06.612] [bmv2] [D] [thread 22221] [53.0] [cxt 0] Parser 'parser': start
+[20:45:06.612] [bmv2] [D] [thread 22221] [53.0] [cxt 0] Parser 'parser' entering state 'start'
+[20:45:06.612] [bmv2] [D] [thread 22221] [53.0] [cxt 0] Extracting header 'ethernet'
+[20:45:06.612] [bmv2] [D] [thread 22221] [53.0] [cxt 0] Extracting header 'ecmp'
+[20:45:06.612] [bmv2] [D] [thread 22221] [53.0] [cxt 0] Extracting header 'ipv4'
+[20:45:06.612] [bmv2] [D] [thread 22221] [53.0] [cxt 0] Extracting header 'tcp'
+[20:45:06.612] [bmv2] [D] [thread 22221] [53.0] [cxt 0] Parser state 'start' has no switch, going to default next state
+[20:45:06.612] [bmv2] [T] [thread 22221] [53.0] [cxt 0] Bytes parsed: 58
+[20:45:06.612] [bmv2] [D] [thread 22221] [53.0] [cxt 0] Parser 'parser': end
+[20:45:06.612] [bmv2] [D] [thread 22221] [53.0] [cxt 0] Pipeline 'ingress': start
+[20:45:06.612] [bmv2] [T] [thread 22221] [53.0] [cxt 0] milestone1.p4(178) Condition "hdr.ipv4.isValid() && hdr.ipv4.ttl > 0" (node_2) is false
+[20:45:06.612] [bmv2] [D] [thread 22221] [53.0] [cxt 0] Pipeline 'ingress': end
+[20:45:06.612] [bmv2] [D] [thread 22221] [53.0] [cxt 0] Egress port is 0
+[20:45:06.612] [bmv2] [D] [thread 22222] [53.0] [cxt 0] Pipeline 'egress': start
+[20:45:06.612] [bmv2] [T] [thread 22222] [53.0] [cxt 0] milestone1.p4(217) Condition "hdr.ecmp.is_load_balance == 1" (node_9) is false
+[20:45:06.612] [bmv2] [D] [thread 22222] [53.0] [cxt 0] Pipeline 'egress': end
+[20:45:06.612] [bmv2] [D] [thread 22222] [53.0] [cxt 0] Deparser 'deparser': start
+[20:45:06.612] [bmv2] [D] [thread 22222] [53.0] [cxt 0] Updating checksum 'cksum'
+[20:45:06.612] [bmv2] [D] [thread 22222] [53.0] [cxt 0] Deparsing header 'ethernet'
+[20:45:06.612] [bmv2] [D] [thread 22222] [53.0] [cxt 0] Deparsing header 'ecmp'
+[20:45:06.612] [bmv2] [D] [thread 22222] [53.0] [cxt 0] Deparsing header 'ipv4'
+[20:45:06.612] [bmv2] [D] [thread 22222] [53.0] [cxt 0] Deparsing header 'tcp'
+[20:45:06.612] [bmv2] [D] [thread 22222] [53.0] [cxt 0] Deparser 'deparser': end
+[20:45:06.612] [bmv2] [D] [thread 22226] [53.0] [cxt 0] Transmitting packet of size 107 out of port 0
+[20:45:06.751] [bmv2] [D] [thread 22221] [54.0] [cxt 0] Processing packet received on port 1
+[20:45:06.751] [bmv2] [D] [thread 22221] [54.0] [cxt 0] Parser 'parser': start
+[20:45:06.751] [bmv2] [D] [thread 22221] [54.0] [cxt 0] Parser 'parser' entering state 'start'
+[20:45:06.751] [bmv2] [D] [thread 22221] [54.0] [cxt 0] Extracting header 'ethernet'
+[20:45:06.751] [bmv2] [D] [thread 22221] [54.0] [cxt 0] Extracting header 'ecmp'
+[20:45:06.751] [bmv2] [D] [thread 22221] [54.0] [cxt 0] Extracting header 'ipv4'
+[20:45:06.751] [bmv2] [D] [thread 22221] [54.0] [cxt 0] Extracting header 'tcp'
+[20:45:06.751] [bmv2] [D] [thread 22221] [54.0] [cxt 0] Parser state 'start' has no switch, going to default next state
+[20:45:06.751] [bmv2] [T] [thread 22221] [54.0] [cxt 0] Bytes parsed: 58
+[20:45:06.751] [bmv2] [D] [thread 22221] [54.0] [cxt 0] Parser 'parser': end
+[20:45:06.751] [bmv2] [D] [thread 22221] [54.0] [cxt 0] Pipeline 'ingress': start
+[20:45:06.751] [bmv2] [T] [thread 22221] [54.0] [cxt 0] milestone1.p4(178) Condition "hdr.ipv4.isValid() && hdr.ipv4.ttl > 0" (node_2) is false
+[20:45:06.751] [bmv2] [D] [thread 22221] [54.0] [cxt 0] Pipeline 'ingress': end
+[20:45:06.751] [bmv2] [D] [thread 22221] [54.0] [cxt 0] Egress port is 0
+[20:45:06.751] [bmv2] [D] [thread 22222] [54.0] [cxt 0] Pipeline 'egress': start
+[20:45:06.751] [bmv2] [T] [thread 22222] [54.0] [cxt 0] milestone1.p4(217) Condition "hdr.ecmp.is_load_balance == 1" (node_9) is false
+[20:45:06.751] [bmv2] [D] [thread 22222] [54.0] [cxt 0] Pipeline 'egress': end
+[20:45:06.751] [bmv2] [D] [thread 22222] [54.0] [cxt 0] Deparser 'deparser': start
+[20:45:06.751] [bmv2] [D] [thread 22222] [54.0] [cxt 0] Updating checksum 'cksum'
+[20:45:06.751] [bmv2] [D] [thread 22222] [54.0] [cxt 0] Deparsing header 'ethernet'
+[20:45:06.751] [bmv2] [D] [thread 22222] [54.0] [cxt 0] Deparsing header 'ecmp'
+[20:45:06.751] [bmv2] [D] [thread 22222] [54.0] [cxt 0] Deparsing header 'ipv4'
+[20:45:06.751] [bmv2] [D] [thread 22222] [54.0] [cxt 0] Deparsing header 'tcp'
+[20:45:06.751] [bmv2] [D] [thread 22222] [54.0] [cxt 0] Deparser 'deparser': end
+[20:45:06.751] [bmv2] [D] [thread 22226] [54.0] [cxt 0] Transmitting packet of size 107 out of port 0
+[20:45:07.246] [bmv2] [D] [thread 22221] [55.0] [cxt 0] Processing packet received on port 1
+[20:45:07.246] [bmv2] [D] [thread 22221] [55.0] [cxt 0] Parser 'parser': start
+[20:45:07.246] [bmv2] [D] [thread 22221] [55.0] [cxt 0] Parser 'parser' entering state 'start'
+[20:45:07.246] [bmv2] [D] [thread 22221] [55.0] [cxt 0] Extracting header 'ethernet'
+[20:45:07.246] [bmv2] [D] [thread 22221] [55.0] [cxt 0] Extracting header 'ecmp'
+[20:45:07.246] [bmv2] [D] [thread 22221] [55.0] [cxt 0] Extracting header 'ipv4'
+[20:45:07.246] [bmv2] [D] [thread 22221] [55.0] [cxt 0] Extracting header 'tcp'
+[20:45:07.246] [bmv2] [D] [thread 22221] [55.0] [cxt 0] Parser state 'start' has no switch, going to default next state
+[20:45:07.246] [bmv2] [T] [thread 22221] [55.0] [cxt 0] Bytes parsed: 58
+[20:45:07.246] [bmv2] [D] [thread 22221] [55.0] [cxt 0] Parser 'parser': end
+[20:45:07.246] [bmv2] [D] [thread 22221] [55.0] [cxt 0] Pipeline 'ingress': start
+[20:45:07.246] [bmv2] [T] [thread 22221] [55.0] [cxt 0] milestone1.p4(178) Condition "hdr.ipv4.isValid() && hdr.ipv4.ttl > 0" (node_2) is false
+[20:45:07.246] [bmv2] [D] [thread 22221] [55.0] [cxt 0] Pipeline 'ingress': end
+[20:45:07.246] [bmv2] [D] [thread 22221] [55.0] [cxt 0] Egress port is 0
+[20:45:07.246] [bmv2] [D] [thread 22222] [55.0] [cxt 0] Pipeline 'egress': start
+[20:45:07.246] [bmv2] [T] [thread 22222] [55.0] [cxt 0] milestone1.p4(217) Condition "hdr.ecmp.is_load_balance == 1" (node_9) is false
+[20:45:07.246] [bmv2] [D] [thread 22222] [55.0] [cxt 0] Pipeline 'egress': end
+[20:45:07.246] [bmv2] [D] [thread 22222] [55.0] [cxt 0] Deparser 'deparser': start
+[20:45:07.246] [bmv2] [D] [thread 22222] [55.0] [cxt 0] Updating checksum 'cksum'
+[20:45:07.246] [bmv2] [D] [thread 22222] [55.0] [cxt 0] Deparsing header 'ethernet'
+[20:45:07.246] [bmv2] [D] [thread 22222] [55.0] [cxt 0] Deparsing header 'ecmp'
+[20:45:07.246] [bmv2] [D] [thread 22222] [55.0] [cxt 0] Deparsing header 'ipv4'
+[20:45:07.246] [bmv2] [D] [thread 22222] [55.0] [cxt 0] Deparsing header 'tcp'
+[20:45:07.246] [bmv2] [D] [thread 22222] [55.0] [cxt 0] Deparser 'deparser': end
+[20:45:07.246] [bmv2] [D] [thread 22226] [55.0] [cxt 0] Transmitting packet of size 107 out of port 0
+[20:53:38.613] [bmv2] [D] [thread 22221] [56.0] [cxt 0] Processing packet received on port 2
+[20:53:38.613] [bmv2] [D] [thread 22221] [56.0] [cxt 0] Parser 'parser': start
+[20:53:38.613] [bmv2] [D] [thread 22221] [56.0] [cxt 0] Parser 'parser' entering state 'start'
+[20:53:38.613] [bmv2] [D] [thread 22221] [56.0] [cxt 0] Extracting header 'ethernet'
+[20:53:38.613] [bmv2] [D] [thread 22221] [56.0] [cxt 0] Extracting header 'ecmp'
+[20:53:38.613] [bmv2] [D] [thread 22221] [56.0] [cxt 0] Extracting header 'ipv4'
+[20:53:38.613] [bmv2] [D] [thread 22221] [56.0] [cxt 0] Extracting header 'tcp'
+[20:53:38.613] [bmv2] [D] [thread 22221] [56.0] [cxt 0] Parser state 'start' has no switch, going to default next state
+[20:53:38.613] [bmv2] [T] [thread 22221] [56.0] [cxt 0] Bytes parsed: 58
+[20:53:38.613] [bmv2] [D] [thread 22221] [56.0] [cxt 0] Parser 'parser': end
+[20:53:38.613] [bmv2] [D] [thread 22221] [56.0] [cxt 0] Pipeline 'ingress': start
+[20:53:38.613] [bmv2] [T] [thread 22221] [56.0] [cxt 0] milestone1.p4(178) Condition "hdr.ipv4.isValid() && hdr.ipv4.ttl > 0" (node_2) is false
+[20:53:38.613] [bmv2] [D] [thread 22221] [56.0] [cxt 0] Pipeline 'ingress': end
+[20:53:38.613] [bmv2] [D] [thread 22221] [56.0] [cxt 0] Egress port is 0
+[20:53:38.613] [bmv2] [D] [thread 22222] [56.0] [cxt 0] Pipeline 'egress': start
+[20:53:38.613] [bmv2] [T] [thread 22222] [56.0] [cxt 0] milestone1.p4(217) Condition "hdr.ecmp.is_load_balance == 1" (node_9) is false
+[20:53:38.613] [bmv2] [D] [thread 22222] [56.0] [cxt 0] Pipeline 'egress': end
+[20:53:38.613] [bmv2] [D] [thread 22222] [56.0] [cxt 0] Deparser 'deparser': start
+[20:53:38.613] [bmv2] [D] [thread 22222] [56.0] [cxt 0] Updating checksum 'cksum'
+[20:53:38.613] [bmv2] [D] [thread 22222] [56.0] [cxt 0] Deparsing header 'ethernet'
+[20:53:38.613] [bmv2] [D] [thread 22222] [56.0] [cxt 0] Deparsing header 'ecmp'
+[20:53:38.613] [bmv2] [D] [thread 22222] [56.0] [cxt 0] Deparsing header 'ipv4'
+[20:53:38.613] [bmv2] [D] [thread 22222] [56.0] [cxt 0] Deparsing header 'tcp'
+[20:53:38.613] [bmv2] [D] [thread 22222] [56.0] [cxt 0] Deparser 'deparser': end
+[20:53:38.613] [bmv2] [D] [thread 22226] [56.0] [cxt 0] Transmitting packet of size 107 out of port 0
+[20:53:38.753] [bmv2] [D] [thread 22221] [57.0] [cxt 0] Processing packet received on port 1
+[20:53:38.753] [bmv2] [D] [thread 22221] [57.0] [cxt 0] Parser 'parser': start
+[20:53:38.753] [bmv2] [D] [thread 22221] [57.0] [cxt 0] Parser 'parser' entering state 'start'
+[20:53:38.753] [bmv2] [D] [thread 22221] [57.0] [cxt 0] Extracting header 'ethernet'
+[20:53:38.753] [bmv2] [D] [thread 22221] [57.0] [cxt 0] Extracting header 'ecmp'
+[20:53:38.753] [bmv2] [D] [thread 22221] [57.0] [cxt 0] Extracting header 'ipv4'
+[20:53:38.753] [bmv2] [D] [thread 22221] [57.0] [cxt 0] Extracting header 'tcp'
+[20:53:38.753] [bmv2] [D] [thread 22221] [57.0] [cxt 0] Parser state 'start' has no switch, going to default next state
+[20:53:38.753] [bmv2] [T] [thread 22221] [57.0] [cxt 0] Bytes parsed: 58
+[20:53:38.753] [bmv2] [D] [thread 22221] [57.0] [cxt 0] Parser 'parser': end
+[20:53:38.753] [bmv2] [D] [thread 22221] [57.0] [cxt 0] Pipeline 'ingress': start
+[20:53:38.753] [bmv2] [T] [thread 22221] [57.0] [cxt 0] milestone1.p4(178) Condition "hdr.ipv4.isValid() && hdr.ipv4.ttl > 0" (node_2) is false
+[20:53:38.753] [bmv2] [D] [thread 22221] [57.0] [cxt 0] Pipeline 'ingress': end
+[20:53:38.753] [bmv2] [D] [thread 22221] [57.0] [cxt 0] Egress port is 0
+[20:53:38.753] [bmv2] [D] [thread 22222] [57.0] [cxt 0] Pipeline 'egress': start
+[20:53:38.753] [bmv2] [T] [thread 22222] [57.0] [cxt 0] milestone1.p4(217) Condition "hdr.ecmp.is_load_balance == 1" (node_9) is false
+[20:53:38.753] [bmv2] [D] [thread 22222] [57.0] [cxt 0] Pipeline 'egress': end
+[20:53:38.753] [bmv2] [D] [thread 22222] [57.0] [cxt 0] Deparser 'deparser': start
+[20:53:38.753] [bmv2] [D] [thread 22222] [57.0] [cxt 0] Updating checksum 'cksum'
+[20:53:38.753] [bmv2] [D] [thread 22222] [57.0] [cxt 0] Deparsing header 'ethernet'
+[20:53:38.753] [bmv2] [D] [thread 22222] [57.0] [cxt 0] Deparsing header 'ecmp'
+[20:53:38.753] [bmv2] [D] [thread 22222] [57.0] [cxt 0] Deparsing header 'ipv4'
+[20:53:38.753] [bmv2] [D] [thread 22222] [57.0] [cxt 0] Deparsing header 'tcp'
+[20:53:38.753] [bmv2] [D] [thread 22222] [57.0] [cxt 0] Deparser 'deparser': end
+[20:53:38.753] [bmv2] [D] [thread 22226] [57.0] [cxt 0] Transmitting packet of size 107 out of port 0
+[20:53:39.247] [bmv2] [D] [thread 22221] [58.0] [cxt 0] Processing packet received on port 1
+[20:53:39.247] [bmv2] [D] [thread 22221] [58.0] [cxt 0] Parser 'parser': start
+[20:53:39.247] [bmv2] [D] [thread 22221] [58.0] [cxt 0] Parser 'parser' entering state 'start'
+[20:53:39.247] [bmv2] [D] [thread 22221] [58.0] [cxt 0] Extracting header 'ethernet'
+[20:53:39.247] [bmv2] [D] [thread 22221] [58.0] [cxt 0] Extracting header 'ecmp'
+[20:53:39.247] [bmv2] [D] [thread 22221] [58.0] [cxt 0] Extracting header 'ipv4'
+[20:53:39.247] [bmv2] [D] [thread 22221] [58.0] [cxt 0] Extracting header 'tcp'
+[20:53:39.247] [bmv2] [D] [thread 22221] [58.0] [cxt 0] Parser state 'start' has no switch, going to default next state
+[20:53:39.247] [bmv2] [T] [thread 22221] [58.0] [cxt 0] Bytes parsed: 58
+[20:53:39.247] [bmv2] [D] [thread 22221] [58.0] [cxt 0] Parser 'parser': end
+[20:53:39.247] [bmv2] [D] [thread 22221] [58.0] [cxt 0] Pipeline 'ingress': start
+[20:53:39.247] [bmv2] [T] [thread 22221] [58.0] [cxt 0] milestone1.p4(178) Condition "hdr.ipv4.isValid() && hdr.ipv4.ttl > 0" (node_2) is false
+[20:53:39.247] [bmv2] [D] [thread 22221] [58.0] [cxt 0] Pipeline 'ingress': end
+[20:53:39.247] [bmv2] [D] [thread 22221] [58.0] [cxt 0] Egress port is 0
+[20:53:39.247] [bmv2] [D] [thread 22222] [58.0] [cxt 0] Pipeline 'egress': start
+[20:53:39.247] [bmv2] [T] [thread 22222] [58.0] [cxt 0] milestone1.p4(217) Condition "hdr.ecmp.is_load_balance == 1" (node_9) is false
+[20:53:39.247] [bmv2] [D] [thread 22222] [58.0] [cxt 0] Pipeline 'egress': end
+[20:53:39.247] [bmv2] [D] [thread 22222] [58.0] [cxt 0] Deparser 'deparser': start
+[20:53:39.247] [bmv2] [D] [thread 22222] [58.0] [cxt 0] Updating checksum 'cksum'
+[20:53:39.247] [bmv2] [D] [thread 22222] [58.0] [cxt 0] Deparsing header 'ethernet'
+[20:53:39.247] [bmv2] [D] [thread 22222] [58.0] [cxt 0] Deparsing header 'ecmp'
+[20:53:39.247] [bmv2] [D] [thread 22222] [58.0] [cxt 0] Deparsing header 'ipv4'
+[20:53:39.247] [bmv2] [D] [thread 22222] [58.0] [cxt 0] Deparsing header 'tcp'
+[20:53:39.247] [bmv2] [D] [thread 22222] [58.0] [cxt 0] Deparser 'deparser': end
+[20:53:39.247] [bmv2] [D] [thread 22226] [58.0] [cxt 0] Transmitting packet of size 107 out of port 0
+open: No such file or directory

@@ -12,12 +12,11 @@ from scapy.layers.inet import _IPOption_HDR
 
 class ECMP(Packet):
     name = "ECMP"
-    fields_desc = [ShortField("is_load_balance", 1)] 
+    fields_desc = [ShortField("is_load_balance", 1),ShortField("type", 0)] 
 
 # bind ECMP class with other layers
 bind_layers(Ether, ECMP, type=0x1234)
 bind_layers(ECMP, IP, type=0x1234)
-bind_layers(IP, TCP, type=0x1234)
 
 def get_if():
     ifs=get_if_list()

@@ -48,6 +48,8 @@ header ecmp_t {
     // if is_load_balance == 0, turn off load balancing;
     // if is_load_balance == 1, turn on load balancing.
     bit<16> is_load_balance; 
+
+    bit<16> type;
 }
 
 // ecmp load balancing index
@@ -87,6 +89,7 @@ parser myParser(packet_in packet,
         packet.extract(hdr.ipv4);
         transition parse_tcp;
     }
+    
     state parse_tcp {
         packet.extract(hdr.tcp);
         transition accept;
