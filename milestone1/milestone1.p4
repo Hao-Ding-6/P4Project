@@ -3,6 +3,8 @@
 
 const bit<16> TYPE_IPV4 = 0x800;
 
+#define MAX_PORTS 6
+
 typedef bit<9>  egressSpec_t;
 typedef bit<48> macAddr_t;
 typedef bit<32> ip4Addr_t;
@@ -49,7 +51,16 @@ header ecmp_t {
     // if is_load_balance == 1, turn on load balancing.
     bit<16> is_load_balance; 
 
+    // type of identifier
     bit<16> type;
+
+    // if is_track == 0, turn off tracking;
+    // if is_track == 1, turn on tracking.
+    bit<16> is_track;
+
+    // monitor of switch 1
+    bit<32> port2_bytes;
+    bit<32> port3_bytes;
 }
 
 // ecmp load balancing index
@@ -192,6 +203,9 @@ control myIngress(inout headers hdr,
 control myEgress(inout headers hdr,
                  inout metadata meta,
                  inout standard_metadata_t standard_metadata) {
+
+    // count the number of bytes seen since the last probe
+    register<bit<32>>(MAX_PORTS) byte_cnt_reg;
     
     // set the mac address of source to smac
     action rewrite_mac(bit<48> smac) {
@@ -216,6 +230,29 @@ control myEgress(inout headers hdr,
     apply {
         if (hdr.ecmp.is_load_balance == 1) {
             send_frame.apply();
+        }
+
+        if (hdr.ecmp.is_track == 1) {
+            if ((bit<32>)standard_metadata.egress_port == 2) {
+                bit<32> p2_byte;
+                byte_cnt_reg.read(p2_byte, 2);
+                hdr.ecmp.port2_bytes = p2_byte + standard_metadata.packet_length;
+                byte_cnt_reg.write(2, p2_byte + standard_metadata.packet_length);
+
+                bit<32> p3_byte;
+                byte_cnt_reg.read(p3_byte, 3);
+                hdr.ecmp.port3_bytes = p3_byte;
+            } else if ((bit<32>)standard_metadata.egress_port == 3) {
+                bit<32> p2_byte;
+                byte_cnt_reg.read(p2_byte, 2);
+                hdr.ecmp.port2_bytes = p2_byte;
+
+                bit<32> p3_byte;
+                byte_cnt_reg.read(p3_byte, 3);
+                hdr.ecmp.port3_bytes = p3_byte + standard_metadata.packet_length;
+                byte_cnt_reg.write(3, p3_byte + standard_metadata.packet_length);
+            }
+            hdr.ecmp.is_track = 0;
         }
     }
 }
