@@ -1,0 +1,28 @@
+{
+    "target": "bmv2",
+    "p4info": "build/milestone3.p4.p4info.txt",
+    "bmv2_json": "build/milestone3.json",
+    "table_entries": [
+        {
+            "table": "myEgress.send_frame",
+            "match": {
+                "standard_metadata.egress_port": 2
+            },
+            "action_name": "myEgress.rewrite_mac",
+            "action_params": {
+                "smac": "00:00:00:01:02:00"
+            }
+        },
+        {
+            "table": "myEgress.send_frame",
+            "match": {
+                "standard_metadata.egress_port": 3
+            },
+            "action_name": "myEgress.rewrite_mac",
+            "action_params": {
+                "smac": "00:00:00:01:03:00"
+            }
+        }
+    ]
+}
+  
