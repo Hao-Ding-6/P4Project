@@ -48,7 +48,7 @@ def main():
 
     print "sending on interface %s to %s" % (iface, str(addr))
 
-    for i in range(200):
+    for i in range(1000):
         pkt = Ether(src=get_if_hwaddr(iface), dst='ff:ff:ff:ff:ff:ff')
         # load balance layer
         pkt = pkt / ECMP(is_load_balance = 1, is_track = 1) 
